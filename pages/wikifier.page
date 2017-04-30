@@ -26,6 +26,58 @@ sec {
         July 2015:      [[ wp: NASA ]] takes a close-up photo of Pluto.;
     }
 }
+/* Documentation section taken from readme.md.page */
+    ~sec [Documentation] {
+        ~p {
+            General
+        }
+        ~list {
+            ~p {
+                [[ Language | doc/language.md ]]           - wikifier language specification
+            }
+            ;
+            ~p {
+                [[ Configuration | doc/configuration.md ]] - wikifier configuration
+            }
+            ;
+            ~p {
+                [[ Blocks | doc/blocks.md ]]               - wikifier built-in block types
+            }
+            ;
+            ~p {
+                [[ Models | doc/models.md ]]               - wikifier templates
+            }
+            ;
+            ~p {
+                [[ Styling | doc/styling.md ]]             - wikifier + CSS
+            }
+            ;
+            ~p {
+                [[ Markdown | doc/markdown.md ]]           - wikifier + Markdown
+            }
+            ;
+            
+        }
+        ~p {
+            Technical
+        }
+        ~list {
+            ~p {
+                [[ Parsing | doc/technical/parsing.md ]]       - wikifier parsing stages
+            }
+            ;
+            ~p {
+                [[ Components | doc/technical/components.md ]] - wikifier programming interfaces
+            }
+            ;
+            ~p {
+                [[ Commands | doc/technical/server-commands.md ]] - wikiserver commands
+            }
+            ;
+            
+        }
+        
+    }
 sec [Components] {
     wikifier is split up into several packages. They are listed below, with
     each subsequent one built atop the previous.
