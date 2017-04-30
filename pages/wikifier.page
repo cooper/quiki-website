@@ -8,7 +8,7 @@ infobox {
         file: wikifier-logo.png;
     };
     :The wikifier logo, created in [[ Microsoft[&reg] Word | wp: Microsoft Word]];
-    Type:           [[ Wiki engine | wp: Wiki software ]];
+    Type:           [[ Wiki engine | wp: Wiki software ]]; 
     Established:    February 2013;
     Author:         [[ Mitchell Cooper | https://github.com/cooper ]];
     Repository:     [[ wikifier on GitHub | https://github.com/cooper/wikifier ]];
