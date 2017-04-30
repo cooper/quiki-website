@@ -158,7 +158,7 @@
             }
             ~list {
                 ~p {
-                    [[ admin.\\[username\\].name | #adminusernamename ]]
+                    [[ admin.\[username\].name | #adminusernamename ]]
                 }
                 ;
                 ~p {
