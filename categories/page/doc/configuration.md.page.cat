@@ -1,0 +1,55 @@
+{
+   "cat_type" : "page",
+   "mod_unix" : 1493512672,
+   "category" : "doc/technical/../configuration.md.page",
+   "pages" : {
+      "doc/technical/components.md.page" : {
+         "generated" : "1",
+         "title" : "Components",
+         "fmt_title" : "Components",
+         "mod_unix" : "1493512156",
+         "lines" : [
+            190,
+            195
+         ],
+         "asof" : 1493512672,
+         "author" : "Markdown"
+      },
+      "doc/markdown.md.page" : {
+         "mod_unix" : "1493512155",
+         "fmt_title" : "Markdown",
+         "generated" : "1",
+         "title" : "Markdown",
+         "author" : "Markdown",
+         "asof" : 1493512675,
+         "lines" : [
+            18
+         ]
+      },
+      "doc/language.md.page" : {
+         "author" : "Markdown",
+         "asof" : 1493512675,
+         "lines" : [
+            619,
+            720
+         ],
+         "mod_unix" : "1493512156",
+         "fmt_title" : "Language",
+         "generated" : "1",
+         "title" : "Language"
+      },
+      "readme.md.page" : {
+         "asof" : 1493515190,
+         "lines" : [
+            145
+         ],
+         "author" : "Markdown",
+         "generated" : "1",
+         "title" : "wikifier",
+         "fmt_title" : "wikifier",
+         "mod_unix" : "1493515190"
+      }
+   },
+   "created" : 1493512672,
+   "file" : "doc/technical/../configuration.md.page.cat"
+}

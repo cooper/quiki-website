@@ -1,0 +1,20 @@
+{
+   "file" : "doc/technical/../interfaces.page.cat",
+   "category" : "doc/technical/../interfaces.page",
+   "mod_unix" : 1493512672,
+   "created" : 1493512672,
+   "cat_type" : "page",
+   "pages" : {
+      "doc/technical/components.md.page" : {
+         "asof" : 1493512672,
+         "title" : "Components",
+         "mod_unix" : "1493512156",
+         "generated" : "1",
+         "lines" : [
+            217
+         ],
+         "fmt_title" : "Components",
+         "author" : "Markdown"
+      }
+   }
+}

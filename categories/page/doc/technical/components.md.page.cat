@@ -1,0 +1,20 @@
+{
+   "created" : 1493512674,
+   "pages" : {
+      "readme.md.page" : {
+         "fmt_title" : "wikifier",
+         "title" : "wikifier",
+         "generated" : "1",
+         "mod_unix" : "1493515190",
+         "lines" : [
+            175
+         ],
+         "asof" : 1493515190,
+         "author" : "Markdown"
+      }
+   },
+   "category" : "doc/technical/components.md.page",
+   "file" : "doc/technical/components.md.page.cat",
+   "cat_type" : "page",
+   "mod_unix" : 1493512674
+}

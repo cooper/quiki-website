@@ -1,0 +1,934 @@
+@page.title: Configuration;
+@page.author: Markdown;
+@page.generated;
+
+
+/* !!! DO NOT EDIT THIS PAGE !!!
+   This page is auto-generated from doc/configuration.md. Any changes will be overwritten
+   the next time the page is generated. Instead, edit doc/configuration.md directly.
+*/
+
+~sec [Configuration] {
+    ~p {
+        This document describes all of the available configuration options. The options
+        are categorized by the lowest-level wikifier interface at which they are used.
+        Some are required for the generation of a single page, others for the operation
+        of a full wiki, and others yet for the operation of a wikiserver.
+    }
+    ~list {
+        ~p {
+            [[ Configuration | #configuration ]]
+        }
+        ~list {
+            ~p {
+                [[ Configuration files | #configuration-files ]]
+            }
+            ;
+            ~p {
+                [[ Configuration directly from code | #configuration-directly-from-code ]]
+            }
+            ;
+            ~p {
+                [[ Wikifier\:\:Page options | #wikifierpage-options ]]
+            }
+            ~list {
+                ~p {
+                    [[ name | #name ]]
+                }
+                ;
+                ~p {
+                    [[ root | #root ]]
+                }
+                ;
+                ~p {
+                    [[ dir | #dir ]]
+                }
+                ;
+                ~p {
+                    [[ external | #external ]]
+                }
+                ;
+                ~p {
+                    [[ page.enable.title | #pageenabletitle ]]
+                }
+                ;
+                ~p {
+                    [[ page.enable.footer | #pageenablefooter ]]
+                }
+                ;
+                ~p {
+                    [[ image.size_method | #imagesize_method ]]
+                }
+                ;
+                ~p {
+                    [[ image.calc | #imagecalc ]]
+                }
+                ;
+                ~p {
+                    [[ image.rounding | #imagerounding ]]
+                }
+                ;
+                ~p {
+                    [[ image.sizer | #imagesizer ]]
+                }
+                ;
+                
+            }
+            ;
+            ~p {
+                [[ Wikifier\:\:Wiki public options | #wikifierwiki-public-options ]]
+            }
+            ~list {
+                ~p {
+                    [[ image.type | #imagetype ]]
+                }
+                ;
+                ~p {
+                    [[ image.quality | #imagequality ]]
+                }
+                ;
+                ~p {
+                    [[ image.enable.retina | #imageenableretina ]]
+                }
+                ;
+                ~p {
+                    [[ image.enable.pregeneration | #imageenablepregeneration ]]
+                }
+                ;
+                ~p {
+                    [[ image.enable.tracking | #imageenabletracking ]]
+                }
+                ;
+                ~p {
+                    [[ image.enable.restriction | #imageenablerestriction ]]
+                }
+                ;
+                ~p {
+                    [[ image.enable.cache | #imageenablecache ]]
+                }
+                ;
+                ~p {
+                    [[ page.enable.cache | #pageenablecache ]]
+                }
+                ;
+                ~p {
+                    [[ cat.per_page | #catper_page ]]
+                }
+                ;
+                ~p {
+                    [[ cat.\[name\].main | #catnamemain ]]
+                }
+                ;
+                ~p {
+                    [[ cat.\[name\].title | #catnametitle ]]
+                }
+                ;
+                ~p {
+                    [[ var.* | #var ]]
+                }
+                ;
+                
+            }
+            ;
+            ~p {
+                [[ Wikifier\:\:Wiki extended options | #wikifierwiki-extended-options ]]
+            }
+            ~list {
+                ~p {
+                    [[ main_page | #main_page ]]
+                }
+                ;
+                ~p {
+                    [[ navigation | #navigation ]]
+                }
+                ;
+                ~p {
+                    [[ template | #template ]]
+                }
+                ;
+                ~p {
+                    [[ logo | #logo ]]
+                }
+                ;
+                
+            }
+            ;
+            ~p {
+                [[ Wikifier\:\:Wiki private options | #wikifierwiki-private-options ]]
+            }
+            ~list {
+                ~p {
+                    [[ admin.\[username\].name | #adminusernamename ]]
+                }
+                ;
+                ~p {
+                    [[ admin.\[username\].email | #adminusernameemail ]]
+                }
+                ;
+                ~p {
+                    [[ admin.\[username\].crypt | #adminusernamecrypt ]]
+                }
+                ;
+                ~p {
+                    [[ admin.\[username\].password | #adminusernamepassword ]]
+                }
+                ;
+                
+            }
+            ;
+            ~p {
+                [[ Wikifier\:\:Server options | #wikifierserver-options ]]
+            }
+            ~list {
+                ~p {
+                    [[ server.dir.wikifier | #serverdirwikifier ]]
+                }
+                ;
+                ~p {
+                    [[ server.dir.wiki | #serverdirwiki ]]
+                }
+                ;
+                ~p {
+                    [[ server.socket.path | #serversocketpath ]]
+                }
+                ;
+                ~p {
+                    [[ server.enable.pregeneration | #serverenablepregeneration ]]
+                }
+                ;
+                ~p {
+                    [[ server.wiki.\[name\].enable | #serverwikinameenable ]]
+                }
+                ;
+                ~p {
+                    [[ server.wiki.\[name\].config | #serverwikinameconfig ]]
+                }
+                ;
+                ~p {
+                    [[ server.wiki.\[name\].private | #serverwikinameprivate ]]
+                }
+                ;
+                ~p {
+                    [[ server.wiki.\[name\].password | #serverwikinamepassword ]]
+                }
+                ;
+                
+            }
+            ;
+            
+        }
+        ;
+        
+    }
+    ~sec {
+        ~sec [Configuration files] {
+            ~p {
+                The primary method of configuration is to define options in a configuration
+                file. All wikifier configuration files are written in the wikifier language\:
+            }
+            ~code {
+@name:          MyWiki;
+@dir.wiki:      /home/www/mywiki;
+@dir.page:      [@dir.wiki]/pages;
+@image.enable.pregeneration;        /* enable a boolean option */
+-@page.enable.title;                /* disable a boolean option */
+}
+~p {
+                If you are using a [b]wikiserver[/b], you must have a dedicated configuration file
+                for the server. This tells it where to listen and where to find the wikis you
+                have configured on the server. This is typically called [c]wikiserver.conf[/c], and
+                it is required as the first argument to the [c]wikiserver[/c] executable.
+            }
+            ~p {
+                [b]Every wiki[/b] also requires its own configuration file. It may make sense to
+                store your wiki configuration file at a path outside of the wiki root, just in
+                case it contains sensitive information. If you are using a wikiserver, the path
+                of each wiki's configuration file is defined in the server configuration using
+                the [[ [c]server.wiki.\[name\].config[/c] | #serverwikinameconfig ]] option. If you are
+                using Wikifier\:\:Wiki directly, the path to the wiki configuration must be
+                provided to the constructor\:
+            }
+            ~code [perl] {
+my $wiki = Wikifier::Wiki->new(config_file => '/home/www/mywiki/wiki.conf');
+}
+~p {
+                Each wiki can optionally have a [b]private configuration[/b] file. This is where
+                the credentials of administrators can exist more securely than in the primary
+                configuration. This file certainly should not be within the wiki root because
+                that would probably allow anyone to download it from the web server. If you are
+                using a wikiserver, the path of the private configuration is defined by
+                [[ [c]server.wiki.\[name\].private[/c] | #serverwikinameprivate ]]. If you are using
+                Wikifier\:\:Wiki directly, the path to the private configuration may be provided
+                to the constructor\:
+            }
+            ~code [perl] {
+my $wiki = Wikifier::Wiki->new(
+    config_file  => '/home/www/mywiki/wiki.conf',
+    private_file => '/home/www/mywiki-private.conf',
+);
+}
+
+        }
+        ~sec [Configuration directly from code] {
+            ~p {
+                Another method of defining configuration values (rather than in a configuration
+                file) is to do so directly from the code where you initialize the interface.
+                This is probably only useful if you are using Wikifier\:\:Page directly\:
+            }
+            ~code [perl] {
+my $page = Wikifier::Page->new(
+    file_path => $path,
+    opts => \{
+        'name' => 'MyWiki',
+        'root.wiki' => '/wiki',
+        'root.page' => '/wiki/page'
+    \}
+);
+}
+
+        }
+        
+    }
+    ~sec [Wikifier\:\:Page options] {
+        ~sec [name] {
+            ~p {
+                Name of the wiki.
+            }
+            ~p {
+                [b]Default[/b]\: [i]Wiki[/i]
+            }
+            
+        }
+        ~sec [root] {
+            ~p {
+                | Option        | Description   | Default       |
+                | -----         | -----         | -----         |
+                | [c]root.wiki[/c]   | Wiki root     | '' (i.e. /)   |
+                | [c]root.page[/c]   | Page root     | [i]/page[/i]       |
+                | [c]root.image[/c]  | Image root    | [i]/images[/i]     |
+                | [c]root.file[/c]   | File root     | None          |
+            }
+            ~p {
+                HTTP roots. These are relative to the server HTTP root, NOT the wiki root.
+                They are used for link targets and image URLs\; they will never be used to
+                locate content on the filesystem. Do not include trailing slashes.
+            }
+            ~p {
+                It may be useful to use [c]root.wiki[/c] within the definitions of the rest\:
+            }
+            ~code {
+@root.wiki:     /mywiki;
+@root.page:     [@root.wiki]/page;
+@root.image:    [@root.wiki]/images;
+}
+~p {
+                If you are using Wikifier\:\:Wiki (or a wikiserver) in conjunction with
+                [[ [c]image.enable.cache[/c] | #imageenablecache ]] and
+                [[ [c]image.enable.pregeneration[/c] | #imageenablepregeneration ]], you should set
+                root.image to wherever your cache directory can be found on the HTTP root. This
+                is where generated images are cached, and full-sized images are symbolically
+                linked to. This allows the web server to deliver images directly, which is
+                certainly most efficient.
+            }
+            ~p {
+                If you specify [c]root.file[/c], the entire wiki directory (as specified by
+                [[ [c]dir.wiki[/c] | #dirwiki ]]) will be indexed by the web server at this path. Note
+                that this will likely expose your wiki configuration.
+            }
+            
+        }
+        ~sec [dir] {
+            ~p {
+                | Option            | Description                                           |
+                | -----             | -----                                                 |
+                | [c]dir.wikifier[/c]    | wikifier repository                                   |
+                | [c]dir.wiki[/c]        | Wiki root directory                                   |
+                | [c]dir.page[/c]        | Page files stored here                                |
+                | [c]dir.image[/c]       | Image originals stored here                           |
+                | [c]dir.model[/c]       | Model files stored here                               |
+                | [c]dir.md[/c]          | Markdown files stored here                            |
+                | [c]dir.cache[/c]       | Generated page and image cache files stored here      |
+                | [c]dir.category[/c]    | Generated category files stored here                  |
+            }
+            ~p {
+                Directories on the filesystem. It is strongly recommended that they are
+                absolute paths\; otherwise they will be dictated by whichever directory the
+                script is started from. All are required except [c]dir.wikifier[/c] and [c]dir.wiki[/c].
+            }
+            ~p {
+                It is recommended that all of the files related to one wiki exist within
+                a master wiki directory ([c]dir.wiki[/c]), but this is not technically required
+                unless you are using Wikifer\:\:Wiki's built-in revision tracking.
+            }
+            ~code {
+@dir.wiki:      /home/www/mywiki;
+@dir.page:      [@dir.wiki]/pages;
+@dir.cache:     [@dir.wiki]/cache;
+}
+~p {
+                [c]dir.wikifier[/c] can be inferred from [[ [c]server.dir.wikifier[/c] | #serverdirwikifier ]]
+                if you are using a wikiserver with this directive set.
+            }
+            
+        }
+        ~sec [external] {
+            ~p {
+                External wiki information.
+            }
+            ~p {
+                You can configure any number of external wikis, each referred to by a shorthand
+                identifier [c]\[wiki_id\][/c] consisting of word-like characters.
+            }
+            ~p {
+                | Option                        | Description | Default
+                | -----                         | -----       | -----
+                | [c]external.\[wiki_id\].name[/c]     | External wiki name, displayed in link tooltips |
+                | [c]external.\[wiki_id\].root[/c]     | External wiki page root |
+                | [c]external.\[wiki_id\].type[/c]     | External wiki type | [i]wikifier[/i]
+            }
+            ~p {
+                Accepted values for [c]type[/c]
+            }
+            ~list {
+                ~p {
+                    [i]wikifier[/i] (this is default)
+                }
+                ;
+                ~p {
+                    [i]mediawiki[/i]
+                }
+                ;
+                
+            }
+            ~p {
+                The default configuration includes the [c]wp[/c] identified for the
+                [[ English Wikipedia | http://en.wikipedia.org ]]\:
+            }
+            ~code {
+@external.wp: \{
+    name: Wikipedia;
+    root: http://en.wikipedia.org/wiki;
+    type: mediawiki;
+\};
+}
+~p {
+                From the page source, this looks like\:
+            }
+            ~code {
+[[ Cats | wp: Cat ]] are a type of [[ wp: animal ]].
+}
+
+        }
+        ~sec [page.enable.title] {
+            ~p {
+                If enabled, the first section's title will be the title of the page. You
+                may want to disable this if your wiki content is embedded within a template
+                that has its own place for the page title.
+            }
+            ~p {
+                [b]Default[/b]\: Enabled
+            }
+            
+        }
+        ~sec [image.size_method] {
+            ~p {
+                The method which the wikifier should use to scale images.
+            }
+            ~p {
+                [b]Accepted values[/b]
+            }
+            ~list {
+                ~p {
+                    [i]javascript[/i] - JavaScript-injected image sizing
+                }
+                ;
+                ~p {
+                    [i]server[/i] - server-side image sizing using [[ [c]image.sizer[/c] | #imagesizer ]] and
+                    [[ [c]image.calc[/c] | #imagecalc ]] (recommended)
+                }
+                ;
+                
+            }
+            ~p {
+                When set to [i]server[/i], the options [[ [c]image.calc[/c] | #imagecalc ]] and
+                [[ [c]image.sizer[/c] | #imagesizer ]] are required. If using Wikifier\:\:Page directly,
+                [c]image.calc[/c] is provided but requires that you install Image\:\:Size. In that
+                case, you are required to provide a custom [c]image.sizer[/c] routine. If using
+                Wikifier\:\:Wiki, [c]image.calc[/c] and [c]image.sizer[/c] are both provided, but GD must be
+                installed from CPAN.
+            }
+            ~p {
+                [b]Default[/b] (Page)\: [i]javascript[/i]
+            }
+            ~p {
+                [b]Default[/b] (Wiki)\: [i]server[/i]
+            }
+            
+        }
+        ~sec [image.calc] {
+            ~p {
+                A code reference that calculates a missing dimension of an image.
+                This is utilized only when [[ [c]image.size_method[/c] | #imagesize_method ]] is [i]server[/i].
+            }
+            ~p {
+                Returns [c](scaled width, scaled height, full width, full height, fullsize)[/c].
+            }
+            ~p {
+                [b]Default[/b] (Page)\: built in, uses Image\:\:Size
+            }
+            ~p {
+                [b]Default[/b] (Wiki)\: built in, uses GD
+            }
+            
+        }
+        ~sec [image.rounding] {
+            ~p {
+                The desired rounding method used when determining image dimensions. Used by
+                the default [[ [c]image.calc[/c] | #imagecalc ]]. If a custom [c]image.calc[/c] is provided,
+                this will not be utilized.
+            }
+            ~p {
+                [b]Accepted values[/b]
+            }
+            ~list {
+                ~p {
+                    [i]normal[/i] - round up from .5 or more, down for less
+                }
+                ;
+                ~p {
+                    [i]up[/i] - always round up
+                }
+                ;
+                ~p {
+                    [i]down[/i] - always round down
+                }
+                ;
+                
+            }
+            ~p {
+                [b]Default[/b]\: [i]normal[/i]
+            }
+            
+        }
+        ~sec [image.sizer] {
+            ~p {
+                A code reference that returns the URL to a sized version of an image. After
+                using [[ [c]image.calc[/c] | #imagecalc ]] to find the dimensions of an image,
+                [c]image.sizer[/c] is called to generate a URL for the image at those dimensions.
+            }
+            ~p {
+                If using [[ [c]image.size_method[/c] | #imagesize_method ]] [i]server[/i], [c]image.sizer[/c] must
+                be provided (unless using Wikifier\:\:Wiki, which provides its own).
+            }
+            ~p {
+                Returns a URL.
+            }
+            ~p {
+                [b]Default[/b] (Page)\: none\; custom code required
+            }
+            ~p {
+                [b]Default[/b] (Wiki)\: built in
+            }
+            
+        }
+        
+    }
+    ~sec [Wikifier\:\:Wiki public options] {
+        ~sec [image.type] {
+            ~p {
+                The desired file type for generated images. This is used by Wikifier\:\:Wiki
+                when generating images of different dimensions. All resulting images will be
+                in this format, regardless of their original format.
+            }
+            ~p {
+                [b]Accepted values[/b]
+            }
+            ~list {
+                ~p {
+                    [i]png[/i] - larger, lossless compression
+                }
+                ;
+                ~p {
+                    [i]jpeg[/i] - smaller, lossy compression
+                }
+                ;
+                
+            }
+            ~p {
+                [b]Default[/b]\: [i]png[/i]
+            }
+            
+        }
+        ~sec [image.quality] {
+            ~p {
+                The desired quality of generated images. This is only utilized if
+                [[ [c]image.type[/c] | #imagetype ]] is set to [i]jpeg[/i].
+            }
+            ~p {
+                [b]Default[/b]\: [i]100[/i]
+            }
+            
+        }
+        ~sec [image.enable.retina] {
+            ~p {
+                Enable retina display support. Wikifier\:\:Wiki will interpret and properly
+                handle @2x or larger scaled versions of images.
+            }
+            ~p {
+                The value of this option is the max scale to support\; e.g.
+            }
+            ~code {
+@image.enable.retina: 3;
+}
+~p {
+                to support both @2x and @3x scaling.
+            }
+            ~p {
+                [b]Default[/b]\: [i]3[/i]
+            }
+            
+        }
+        ~sec [image.enable.pregeneration] {
+            ~p {
+                Enable pregeneration of images. Images will be generated as pages that
+                require them are generated. This contrasts from the default behavior in
+                which images are generated as they are requested.
+            }
+            ~p {
+                The advantage of this option is that it allows images to be served directly
+                by a web server without summoning any wikifier software, decreasing the page
+                load time.
+            }
+            ~p {
+                The disadvantage is slower page generation time if new images have been
+                added since the last generation time.
+            }
+            ~p {
+                [b]Requires[/b]\: [[ [c]image.enable.cache[/c] | #imageenablecache ]]
+            }
+            ~p {
+                [b]Default[/b]\: Enabled
+            }
+            
+        }
+        ~sec [image.enable.tracking] {
+            ~p {
+                If enabled, Wikifier\:\:Wiki will create page categories that track image
+                usage. This is particularly useful for a Wikifier\:\:Server feature that
+                allows images and pages to be generated as they are modified.
+            }
+            ~p {
+                [b]Default[/b]\: Enabled
+            }
+            
+        }
+        ~sec [image.enable.restriction] {
+            ~p {
+                If enabled, Wikifier\:\:Wiki will only generate images in dimensions used by
+                pages on the wiki. This prevents useless resource usage and abuse.
+            }
+            ~p {
+                [b]Default[/b]\: Enabled
+            }
+            
+        }
+        ~sec [image.enable.cache] {
+            ~p {
+                Enable caching of generated images.
+            }
+            ~p {
+                [b]Required by[/b]\: [[ [c]image.enable.pregeneration[/c] | #imageenablepregeneration ]],
+                [[ [c]image.enable.restriction[/c] | #imageenablerestriction ]]
+            }
+            ~p {
+                [b]Default[/b]\: Enabled
+            }
+            
+        }
+        ~sec [page.enable.cache] {
+            ~p {
+                Enable caching of generated pages.
+            }
+            ~p {
+                [b]Default[/b]\: Enabled
+            }
+            
+        }
+        ~sec [cat.per_page] {
+            ~p {
+                Number of pages to display on a single category posts page.
+            }
+            ~p {
+                [b]Default[/b]\: [i]5[/i]
+            }
+            
+        }
+        ~sec [cat.\[name\].main] {
+            ~p {
+                Set the main page for the category by the name of [c]\[name\][/c].
+                This means that it will be displayed before all other categories, regardless
+                of their creation dates. The value of this option is the page filename.
+            }
+            ~p {
+                You can also mark a page as the main page of a category from within the page
+                source itself, like so\:
+            }
+            ~code {
+@category.some_cat.main;
+}
+~p {
+                If multiple pages are marked as the main page of a category, the one with
+                the most recent creation time is preferred. If this option is provided,
+                however, the page specified by it will always be preferred.
+            }
+            ~p {
+                [b]Default[/b]\: None\; show newest at top
+            }
+            
+        }
+        ~sec [cat.\[name\].title] {
+            ~p {
+                Sets the human-readable title for the category by the name of [c]\[name\][/c].
+            }
+            ~p {
+                You can also set the title of a category from within the category file
+                itself using the "title" key.
+            }
+            ~p {
+                [b]Default[/b]\: None\; page filename displayed as title
+            }
+            
+        }
+        ~sec [var.*] {
+            ~p {
+                Global wiki variable space. Variables defined in this space will be
+                available throughout the wiki. However they may be overwritten on a
+                particular page.
+            }
+            ~p {
+                Example (in config)\:
+            }
+            ~code {
+@var.site.url: http://mywiki.example.com
+@var.site.display_name: MyWiki;
+}
+~p {
+                Example (on main page)\:
+            }
+            ~code {
+Welcome to [@site.display_name]!
+}
+
+        }
+        
+    }
+    ~sec [Wikifier\:\:Wiki extended options] {
+        ~p {
+            These options are not used by Wikifier\:\:Wiki directly, but may be required by
+            frontends or admin panels. They are documented here for consistency across
+            software built atop wikifier.
+        }
+        ~sec [main_page] {
+            ~p {
+                Name of the main page. This should not be the page's title but rather a
+                filename, relative to [[ [c]dir.page[/c] | #dir ]]. The [c].page[/c] extension is not
+                necessary.
+            }
+            
+        }
+        ~sec [navigation] {
+            ~p {
+                A map of navigation items. Keys are unformatted text to be displayed, with
+                spaces permitted. Values are URLs, relative to the current page (NOT the wiki
+                root).
+            }
+            ~code {
+@navigation: map \{
+    Main page: /page/welcome;
+    Rules: /page/rules;
+\};
+}
+~p {
+                You can nest maps to create sublists at any level, but the number of levels
+                supported depends on the frontend or template being used by the wiki.
+            }
+            ~code {
+@navigation: map \{
+    Home: /page/welcome;
+    About: map \{
+        Company info: /page/our_company;
+        Facebook: http://facebook.com/our.company;
+    \};
+    Contact: /contact;
+\};
+}
+
+        }
+        ~sec [template] {
+            ~p {
+                Name or path of the template used by the wiki.
+            }
+            ~code {
+@template: default;
+}
+
+        }
+        ~sec [logo] {
+            ~p {
+                Filename for the wiki logo, relative to [[ [c]dir.image[/c] | #dir ]].
+            }
+            ~p {
+                Frontends should automatically generate the logo in whatever dimensions are
+                needed and display it where appropriate.
+            }
+            ~code {
+@logo: logo.png;
+}
+
+        }
+        
+    }
+    ~sec [Wikifier\:\:Wiki private options] {
+        ~p {
+            Private Wikifier\:\:Wiki options may be in a separation configuration file.
+            This is where administrator credentials are stored. You can also put them in the
+            primary configuration file, but this is not recommended.
+        }
+        ~sec [admin.\[username\].name] {
+            ~p {
+                The real name for the administrator [c]\[username\][/c]. This is used to attribute
+                page creation, image upload, etc. to the user. It may be displayed to the
+                public as the author or maintainer of a page or the owner of some file.
+                It is also used for Wikifier\:\:Wiki's built-in revision tracking.
+            }
+            
+        }
+        ~sec [admin.\[username\].email] {
+            ~p {
+                The email address of the administrator [c]\[username\][/c]. Currently this is used
+                only for Wikifier\:\:Wiki's built-in revision tracking.
+            }
+            
+        }
+        ~sec [admin.\[username\].crypt] {
+            ~p {
+                The type of encryption used for the password of administrator [c]\[username\][/c].
+            }
+            ~p {
+                [b]Accepted values[/b]
+            }
+            ~list {
+                ~p {
+                    [i]none[/i] (plain text)
+                }
+                ;
+                ~p {
+                    [i]sha1[/i]
+                }
+                ;
+                ~p {
+                    [i]sha256[/i]
+                }
+                ;
+                ~p {
+                    [i]sha512[/i]
+                }
+                ;
+                
+            }
+            ~p {
+                [b]Default[/b]\: [i]sha1[/i]
+            }
+            
+        }
+        ~sec [admin.\[username\].password] {
+            ~p {
+                The password of the administrator [c]\[username\][/c]. It must be encrypted in
+                the crypt set by [[ [c]admin.\[username\].crypt[/c] | #adminusernamecrypt ]].
+            }
+            
+        }
+        
+    }
+    ~sec [Wikifier\:\:Server options] {
+        ~sec [server.dir.wikifier] {
+            ~p {
+                Path to the wikifier repository. This is optional but strongly recommended.
+                Specifying it here is preferred over the [[ [c]dir.wikifier[/c] | #dir ]] wiki option.
+            }
+            
+        }
+        ~sec [server.dir.wiki] {
+            ~p {
+                Path to some directory where wikis are stored. Your wikis do not all have to be
+                in the same directory, so this is optional. But if you do choose to do it that
+                way, this is used to infer [[ [c]dir.wiki[/c] | #dir ]] and
+                [[ [c]server.wiki.\[name\].config[/c] | #serverwikinameconfig ]].
+            }
+            
+        }
+        ~sec [server.socket.path] {
+            ~p {
+                The path of a UNIX socket to listen on.
+            }
+            ~p {
+                If unspecified, the server will not listen on a UNIX socket.
+            }
+            
+        }
+        ~sec [server.enable.pregeneration] {
+            ~p {
+                If enabled, the Wikifier\:\:Server will generate all pages upon the first
+                start. It will then monitor all page files and regenerate them as soon as
+                they are modified, greatly reducing the first page load time.
+            }
+            ~p {
+                [b]Requires[/b]\: [[ [c]page.enable.cache[/c] | #pageenablecache ]]
+            }
+            ~p {
+                [b]Default[/b]\: Disabled (but strongly recommended)
+            }
+            
+        }
+        ~sec [server.wiki.\[name\].enable] {
+            ~p {
+                Enables the wiki by the name of [c]\[name\][/c]. Any wikis configured that do not have
+                this option present will be skipped. Any number of wikis can be configured on a
+                single server using this.
+            }
+            
+        }
+        ~sec [server.wiki.\[name\].config] {
+            ~p {
+                The path to the configuration file for the wiki by the name of [c]\[name\][/c]. This is
+                required for each wiki unless [[ [c]server.dir.wiki[/c] | #serverdirwiki ]] is set.
+            }
+            ~p {
+                [b]Default[/b]\: [[ [c]server.dir.wiki[/c] | #serverdirwiki ]][c]/\[name\]/wiki.conf[/c]
+            }
+            
+        }
+        ~sec [server.wiki.\[name\].private] {
+            ~p {
+                The path to the PRIVATE configuration file for the wiki by the name of
+                [c]\[name\][/c]. This is where administrator credentials are stored. If it is not
+                provided, it will be assumed that this information is in the primary
+                configuration file. Be sure that the private configuration is not inside
+                the HTTP server root or has proper permissions to deny access to it.
+            }
+            
+        }
+        ~sec [server.wiki.\[name\].password] {
+            ~p {
+                The read authentication password for the wiki by the name of [c]\[name\][/c]
+                in plain text. This is required unless the wikiserver is reached via standard
+                I/O (such as with the default [[ quiki | https://github.com/cooper/quiki ]]
+                configuration).
+            }
+            
+        }
+        
+    }
+    
+}
+

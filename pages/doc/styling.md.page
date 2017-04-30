@@ -1,0 +1,114 @@
+@page.title: Styling;
+@page.author: Markdown;
+@page.generated;
+
+
+/* !!! DO NOT EDIT THIS PAGE !!!
+   This page is auto-generated from doc/styling.md. Any changes will be overwritten
+   the next time the page is generated. Instead, edit doc/styling.md directly.
+*/
+
+~sec [Styling] {
+    ~p {
+        wikifier provides a simple solution to styling with CSS from within the wiki
+        language. Rules can be added to specific blocks and/or children of specific
+        blocks, and selectors like classes and block types can also narrow down the
+        matched elements.
+    }
+    ~list {
+        ~p {
+            [[ Styling | #styling ]]
+        }
+        ~list {
+            ~p {
+                [[ Rules for one block | #rules-for-one-block ]]
+            }
+            ;
+            ~p {
+                [[ Rules for a block's children | #rules-for-a-blocks-children ]]
+            }
+            ;
+            
+        }
+        ;
+        
+    }
+    ~sec {
+        ~sec [Rules for one block] {
+            ~p {
+                A style block with no selector will be applied to the parent block.
+            }
+            ~code {
+imagebox \{
+    file:   some-image.png;
+    width:  500px;
+    style \{
+        padding: 5px;
+        background-color: red;
+    \}
+\}
+}
+
+        }
+        ~sec [Rules for a block's children] {
+            ~p {
+                If selectors are specified, the styles will apply to the block's children
+                which satisfy them.
+            }
+            ~p {
+                All children
+            }
+            ~code {
+sec \{
+    style [*] \{
+        margin: 50px;
+    \}
+
+    First paragraph. First paragraph. First paragraph. First paragraph.
+    First paragraph. First paragraph. First paragraph. First paragraph.
+
+    Second paragraph. Second paragraph. Second paragraph.
+    Second paragraph. Second paragraph. Second paragraph.
+\}
+}
+~p {
+                Children matching a class
+            }
+            ~code {
+sec \{
+    style [.padded] \{
+        padding: 50px;
+    \}
+
+    First paragraph. First paragraph. First paragraph. First paragraph.
+    First paragraph. First paragraph. First paragraph. First paragraph.
+
+    p.padded \{
+        Second paragraph. Second paragraph. Second paragraph.
+        Second paragraph. Second paragraph. Second paragraph.
+    \}
+\}
+}
+~p {
+                All children plus the parent
+            }
+            ~code {
+sec \{
+    style [this, *] \{
+        margin: 50px;
+    \}
+
+    First paragraph. First paragraph. First paragraph. First paragraph.
+    First paragraph. First paragraph. First paragraph. First paragraph.
+
+    Second paragraph. Second paragraph. Second paragraph.
+    Second paragraph. Second paragraph. Second paragraph.
+\}
+}
+
+        }
+        
+    }
+    
+}
+

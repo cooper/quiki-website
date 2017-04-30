@@ -1,0 +1,82 @@
+@page.title: Models;
+@page.author: Markdown;
+@page.generated;
+
+
+/* !!! DO NOT EDIT THIS PAGE !!!
+   This page is auto-generated from doc/models.md. Any changes will be overwritten
+   the next time the page is generated. Instead, edit doc/models.md directly.
+*/
+
+~sec [Models] {
+    ~p {
+        The [c]model\{\}[/c] block type is a mechanism by which you can include wikifier
+        source code from another file. This allows you to create reusable templates
+        for consistency across your wiki, or to eliminate repetitive code in your
+        page files.
+    }
+    ~list {
+        ~p {
+            [[ Models | #models ]]
+        }
+        ~list {
+            ~p {
+                [[ Creating models | #creating-models ]]
+            }
+            ;
+            ~p {
+                [[ Using models | #using-models ]]
+            }
+            ;
+            
+        }
+        ;
+        
+    }
+    ~sec [Creating models] {
+        ~p {
+            For safety, you cannot include any page file. Instead, models should be in a
+            dedicated directory within your wiki root. This directory is determined by the
+            [c]@dir.model[/c] configuration value, which defaults to [c]models[/c].
+        }
+        ~p {
+            Model source files can contain any wikifier code, but it is common to use them
+            in conjunction with [[ [c]html\{\}[/c] | blocks.md#html ]] or [[ [c]format\{\}[/c] | blocks.md#format ]]
+            to make HTML templates. The result is that your actual page files are far less
+            cluttered, with all the ugly HTML hidden behind a model.
+        }
+        ~p {
+            Inside the model source file, the special variable [c]@m[/c] refers to any key-value
+            options provided to the model from the main page.
+        }
+        
+    }
+    ~sec [Using models] {
+        ~p {
+            wikifier has a special syntax for using models. Write them like any block,
+            except prefix the model name with a dollar sign ([c]$[/c]).
+        }
+        ~code {
+$my_model \{
+    option1: Something;
+    option2: Another option;
+\}
+}
+~p {
+            Note\: From within the model source, those options can be retrieved with
+            [c]@m.option1[/c] and [c]@m.option2[/c].
+        }
+        ~p {
+            This convenient syntax is the same as writing the long form\:
+        }
+        ~code {
+model [my_model] \{
+    option1: Something;
+    option2: Another option;
+\}
+}
+
+    }
+    
+}
+
