@@ -19,7 +19,7 @@ sec {
     file-based. There are no databases. Yet, it offers page caching, image
     sizing, session management/authentication, and lots of other things that
     fancy wikis use databases for.
-
+ 
     wikifier is accompanied by [[ quiki | https://github.com/cooper/quiki ]],
     a standalone web server and wiki frontend, as well as
     [[ adminifier | https://github.com/cooper/adminifier ]], a web-based wiki
