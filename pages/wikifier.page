@@ -19,6 +19,12 @@ sec {
     file-based. There are no databases. Yet, it offers page caching, image
     sizing, session management/authentication, and lots of other things that
     fancy wikis use databases for.
+
+    wikifier is accompanied by [[ quiki | https://github.com/cooper/quiki ]],
+    a standalone web server and wiki frontend, as well as
+    [[ adminifier | https://github.com/cooper/adminifier ]], a web-based wiki
+    administration panel.
+
     history {
         February 2013:  The first commit of wikifier is published.;
         December 2013:  [[ wp: Nelson Mandela ]] passes away.;
