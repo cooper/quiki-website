@@ -15,8 +15,9 @@ infobox {
     Website:        [[ http://wikifier.notroll.net ]];
 }
 sec {
-    wikifier is a wiki engine. It is unique because it is completely
-    file-based. There are no databases. Yet, it offers page caching, image
+    wikifier is a file-based wiki engine. It is unique in that it requires no
+    database, and it is so simple that it can be managed with nothing more than a
+    plain text editor. Yet, it offers page caching, image
     sizing, session management/authentication, and lots of other things that
     fancy wikis use databases for.
 
