@@ -3,7 +3,7 @@
 @category.wiki;
 @category.software;
 
-infobox {
+infobox { 
     image {
         file: wikifier-logo.png;
     };
