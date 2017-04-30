@@ -11,7 +11,8 @@ infobox {
     Type:           [[ Wiki engine | wp: Wiki software ]];
     Established:    February 2013;
     Author:         [[ Mitchell Cooper | https://github.com/cooper ]];
-    Website:        [[ wikifier on GitHub | https://github.com/cooper/wikifier ]];
+    Repository:     [[ wikifier on GitHub | https://github.com/cooper/wikifier ]];
+    Website:        [[ http://wikifier.notroll.net ]];
 }
 sec {
     wikifier is a wiki engine. It is unique because it is completely
