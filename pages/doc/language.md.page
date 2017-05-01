@@ -9,6 +9,7 @@
 */
 
 ~sec [Language] {
+    meta { section: language; }
     ~p {
         wikifier's source language is designed to be easily legible by the naked eye.
     }
@@ -16,7 +17,7 @@
         ~p {
             [[ Language | #language ]]
         }
-        ~list {
+        ~list { 
             ~p {
                 [[ Syntax | #syntax ]]
             }
@@ -123,6 +124,7 @@
         
     }
     ~sec [Syntax] {
+        meta { section: syntax; }
         ~p {
             The wikifier source language is [[ parsed hierarchically | technical/parsing.md ]].
             The source is divided into components called [[ blocks | #blocks ]], each of which
@@ -171,6 +173,7 @@
             
         }
         ~sec [Comments] {
+            meta { section: comments; }
             ~p {
                 C-style block comments are supported\:
             }
@@ -189,6 +192,7 @@
 
         }
         ~sec [Escaping] {
+            meta { section: escaping; }
             ~p {
                 Some characters must be escaped for literal use. The escape character ([c]\\[/c])
                 denotes the character immediately following it as escaped.
@@ -196,41 +200,129 @@
             ~p {
                 [b]Anywhere[/b] in a document, these characters MUST be escaped for literal use\:
             }
-            ~p {
-                | Character | Reason for escape                 |
-                | -----     | -----                             |
-                | [c]\\[/c]       | Escape character                  |
-                | [c]\{[/c]       | Starts a [[ block | #blocks ]]         |
-                | [c]\}[/c]       | Terminates a [[ block | #blocks ]]     |
+            ~html {
+            <table class="wiki-table">
+                <thead>
+                    <tr>
+                        <th>
+                            &lt;p&gt;Character&lt;/p&gt;
+                        </th>
+                        <th>
+                            &lt;p&gt;Reason for escape&lt;/p&gt;
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                        </td>
+                        <td>
+                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                        </td>
+                        <td>
+                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                        </td>
+                        <td>
+                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            Within [**formatted text**](#text-formatting), the following characters must be
+            escaped in addition to those listed above:
             }
-            ~p {
-                Within [[ [b]formatted text[/b] | #text-formatting ]], the following characters must be
-                escaped in addition to those listed above\:
+            ~html {
+            <table class="wiki-table">
+                <thead>
+                    <tr>
+                        <th>
+                            &lt;p&gt;Character&lt;/p&gt;
+                        </th>
+                        <th>
+                            &lt;p&gt;Reason for escape&lt;/p&gt;
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                        </td>
+                        <td>
+                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                        </td>
+                        <td>
+                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            Within [**maps**](blocks.md#map) and [**lists**](blocks.md#list), these
+            characters must also be escaped:
             }
-            ~p {
-                | Character | Reason for escape                                         |
-                | -----     | -----                                                     |
-                | [c]\[[/c]       | Starts a [[ text formatting | #text-formatting ]] token        |
-                | [c]\][/c]       | Terminates a [[ text formatting | #text-formatting ]] token    |
-            }
-            ~p {
-                Within [[ [b]maps[/b] | blocks.md#map ]] and [[ [b]lists[/b] | blocks.md#list ]], these
-                characters must also be escaped\:
-            }
-            ~p {
-                | Character | Must be escaped in                    | Reason for escape     |
-                | -----     | -----                                 | -----                 |
-                | [c]\;[/c]       | Map keys and values, list values      | Terminates a value    |
-                | [c]\:[/c]       | Map keys                              | Terminates a key      |
-            }
-            ~p {
-                [b]Brace-escape[/b]. Sometimes it may be desirable to disable all parsing within a
-                particular block. This is especially useful for things like
-                [[ [c]code\{\}[/c] | blocks.md#code ]], [[ [c]html\{\}[/c] | blocks.md#html ]], and
-                [[ [c]format\{\}[/c] | blocks.md#format ]] because then you do not have to escape every
-                instance of special characters like [c]\{[/c], [c]\}[/c], and [c]\\[/c]. It works as long as there
-                is a closing bracket [c]\{[/c] to correspond with every opening bracket [c]\}[/c]. To enable
-                brace-escape mode, open and close the block with double curly brackets\:
+            ~html {
+            <table class="wiki-table">
+                <thead>
+                    <tr>
+                        <th>
+                            &lt;p&gt;Character&lt;/p&gt;
+                        </th>
+                        <th>
+                            &lt;p&gt;Must be escaped in&lt;/p&gt;
+                        </th>
+                        <th>
+                            &lt;p&gt;Reason for escape&lt;/p&gt;
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            &lt;p&gt;Character | Must be escaped in                    | Reason for escape&lt;/p&gt;
+                        </td>
+                        <td>
+                            &lt;p&gt;Character | Must be escaped in                    | Reason for escape&lt;/p&gt;
+                        </td>
+                        <td>
+                            &lt;p&gt;Character | Must be escaped in                    | Reason for escape&lt;/p&gt;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &lt;p&gt;Character | Must be escaped in                    | Reason for escape&lt;/p&gt;
+                        </td>
+                        <td>
+                            &lt;p&gt;Character | Must be escaped in                    | Reason for escape&lt;/p&gt;
+                        </td>
+                        <td>
+                            &lt;p&gt;Character | Must be escaped in                    | Reason for escape&lt;/p&gt;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            **Brace-escape**. Sometimes it may be desirable to disable all parsing within a
+            particular block. This is especially useful for things like
+            [`code\{\}`](blocks.md#code), [`html\{\}`](blocks.md#html), and
+            [`format\{\}`](blocks.md#format) because then you do not have to escape every
+            instance of special characters like `\{`, `\}`, and `\\`. It works as long as there
+            is a closing bracket `\{` to correspond with every opening bracket `\}`. To enable
+            brace-escape mode, open and close the block with double curly brackets:
             }
             ~code [javascript] {
 code \{\{
@@ -255,6 +347,7 @@ code \{\{
         
     }
     ~sec [Blocks] {
+        meta { section: blocks; }
         ~p {
             The fundamental component of the wikifier language is the [b]block[/b].
             The syntax for a block is as follows\:
@@ -289,6 +382,7 @@ Type [Name] \{ Content \}
         }
         ~sec {
             ~sec [Nameless blocks] {
+                meta { section: nameless-blocks; }
                 ~p {
                     The [c]\[block name\][/c] field may be omitted for block types that do not require it.
                 }
@@ -311,6 +405,7 @@ imagebox \{
 
             }
             ~sec [Named blocks] {
+                meta { section: named-blocks; }
                 ~p {
                     For block types that support a [c]\[block name\][/c] field, it should follow the block
                     type and be delimited by square brackets [c]\[[/c] and [c]\][/c]. The name field may
@@ -335,6 +430,7 @@ sec [Statistics] \{
 
             }
             ~sec [Model shorthand] {
+                meta { section: model-shorthand; }
                 ~p {
                     wikifier has a special syntax for using [[ [b]models[/b] | models.md ]]. Write them like
                     any block, except prefix the model name with a dollar sign ([c]$[/c]).
@@ -361,6 +457,7 @@ model [my_model] \{
 
             }
             ~sec [Data types] {
+                meta { section: data-types; }
                 ~p {
                     [[ [c]map\{\}[/c] | blocks.md#map ]] provides a key-value map datatype. It serves as the
                     base of many other block types. Likewise, [[ [c]list\{\}[/c] | blocks.md#list ]] provides an
@@ -373,10 +470,12 @@ model [my_model] \{
         
     }
     ~sec [Variables] {
+        meta { section: variables; }
         ~p {
             wikifier supports string, boolean, and block variables.
         }
         ~sec [Assignment] {
+            meta { section: assignment; }
             ~p {
                 [b]String[/b] variables look like this\:
             }
@@ -403,6 +502,7 @@ model [my_model] \{
 
         }
         ~sec [Retrieval] {
+            meta { section: retrieval; }
             ~p {
                 Once variables are assigned, they are typically used in
                 [[ formatted text | #text-formatting ]] or [[ conditionals | #conditionals ]]. You can use
@@ -434,6 +534,7 @@ sec \{
 
         }
         ~sec [Formatted variables] {
+            meta { section: formatted-variables; }
             ~p {
                 By the way, you can use text formatting within string variables, including other
                 embedded variables\:
@@ -451,6 +552,7 @@ sec \{
             
         }
         ~sec [Attributes] {
+            meta { section: attributes; }
             ~p {
                 Variables can have [b]attributes[/b]. This helps to organize things\:
             }
@@ -506,6 +608,7 @@ sec \{
 
         }
         ~sec [Conditionals] {
+            meta { section: conditionals; }
             ~p {
                 You can use the [b]conditional blocks[/b] [c]if\{\}[/c], [c]elsif\{\}[/c], and [c]else\{\}[/c] on
                 variables. Currently all that can be tested is the boolean value of a variable.
@@ -523,6 +626,7 @@ else \{
 
         }
         ~sec [Interpolable variables] {
+            meta { section: interpolable-variables; }
             ~p {
                 [b]Interpolable variables[/b] (with the [c]%[/c] sigil) allow you to evaluate the
                 formatting of a string variable at some point after the variable was defined.
@@ -570,6 +674,7 @@ else \{
             
         }
         ~sec [Special variables] {
+            meta { section: special-variables; }
             ~p {
                 [c]@page[/c] contains information about the current page. Its attributes are set
                 at the very top of a page source file.
@@ -649,12 +754,14 @@ else \{
         
     }
     ~sec [Text formatting] {
+        meta { section: text-formatting; }
         ~p {
             Many block types, as well as values in [[ variable assignment | #assignment ]], can
             contain [b]formatted text[/b]. Square brackets [c]\[[/c] and [c]\][/c] are used to delimit text
             formatting tokens.
         }
         ~sec [Basic formatting] {
+            meta { section: basic-formatting; }
             ~list {
                 ~p {
                     [c]\[b\]bold text\[/b\][/c] - [b]bold text[/b]
@@ -693,6 +800,7 @@ else \{
             
         }
         ~sec [Variables] {
+            meta { section: variables; }
             ~list {
                 ~p {
                     [c]\[@some.variable\][/c] - normal variable
@@ -711,6 +819,7 @@ else \{
             
         }
         ~sec [Links] {
+            meta { section: links; }
             ~list {
                 ~p {
                     [c]\[\[ Page name \]\][/c] - internal wiki page link
@@ -738,6 +847,7 @@ else \{
             
         }
         ~sec [References] {
+            meta { section: references; }
             ~list {
                 ~p {
                     [c]\[ref\][/c] - a fake reference. just to make your wiki look credible.
@@ -752,6 +862,7 @@ else \{
             
         }
         ~sec [Characters] {
+            meta { section: characters; }
             ~list {
                 ~p {
                     [c]\[nl\][/c] - a line break
