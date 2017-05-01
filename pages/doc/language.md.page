@@ -17,7 +17,7 @@
         ~p {
             [[ Language | #language ]]
         }
-        ~list { 
+        ~list {
             ~p {
                 [[ Syntax | #syntax ]]
             }
@@ -205,124 +205,130 @@
                 <thead>
                     <tr>
                         <th>
-                            &lt;p&gt;Character&lt;/p&gt;
+                            Character
                         </th>
                         <th>
-                            &lt;p&gt;Reason for escape&lt;/p&gt;
+                            Reason for escape
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                            <code>\\</code>
                         </td>
                         <td>
-                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
-                        </td>
-                        <td>
-                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                            Escape character
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                            <code>\{</code>
                         </td>
                         <td>
-                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                            Starts a <a href="#blocks">block</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>\}</code>
+                        </td>
+                        <td>
+                            Terminates a <a href="#blocks">block</a>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            Within [**formatted text**](#text-formatting), the following characters must be
-            escaped in addition to those listed above:
+            }
+            ~p {
+                Within [[ [b]formatted text[/b] | #text-formatting ]], the following characters must be
+                escaped in addition to those listed above\:
             }
             ~html {
             <table class="wiki-table">
                 <thead>
                     <tr>
                         <th>
-                            &lt;p&gt;Character&lt;/p&gt;
+                            Character
                         </th>
                         <th>
-                            &lt;p&gt;Reason for escape&lt;/p&gt;
+                            Reason for escape
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                            <code>[</code>
                         </td>
                         <td>
-                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                            Starts a <a href="#text-formatting">text formatting</a> token
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                            <code>]</code>
                         </td>
                         <td>
-                            &lt;p&gt;Character | Reason for escape&lt;/p&gt;
+                            Terminates a <a href="#text-formatting">text formatting</a> token
                         </td>
                     </tr>
                 </tbody>
             </table>
-            Within [**maps**](blocks.md#map) and [**lists**](blocks.md#list), these
-            characters must also be escaped:
+            }
+            ~p {
+                Within [[ [b]maps[/b] | blocks.md#map ]] and [[ [b]lists[/b] | blocks.md#list ]], these
+                characters must also be escaped\:
             }
             ~html {
             <table class="wiki-table">
                 <thead>
                     <tr>
                         <th>
-                            &lt;p&gt;Character&lt;/p&gt;
+                            Character
                         </th>
                         <th>
-                            &lt;p&gt;Must be escaped in&lt;/p&gt;
+                            Must be escaped in
                         </th>
                         <th>
-                            &lt;p&gt;Reason for escape&lt;/p&gt;
+                            Reason for escape
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            &lt;p&gt;Character | Must be escaped in                    | Reason for escape&lt;/p&gt;
+                            <code>;</code>
                         </td>
                         <td>
-                            &lt;p&gt;Character | Must be escaped in                    | Reason for escape&lt;/p&gt;
+                            Map keys and values, list values
                         </td>
                         <td>
-                            &lt;p&gt;Character | Must be escaped in                    | Reason for escape&lt;/p&gt;
+                            Terminates a value
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            &lt;p&gt;Character | Must be escaped in                    | Reason for escape&lt;/p&gt;
+                            <code>:</code>
                         </td>
                         <td>
-                            &lt;p&gt;Character | Must be escaped in                    | Reason for escape&lt;/p&gt;
+                            Map keys
                         </td>
                         <td>
-                            &lt;p&gt;Character | Must be escaped in                    | Reason for escape&lt;/p&gt;
+                            Terminates a key
                         </td>
                     </tr>
                 </tbody>
             </table>
-            **Brace-escape**. Sometimes it may be desirable to disable all parsing within a
-            particular block. This is especially useful for things like
-            [`code\{\}`](blocks.md#code), [`html\{\}`](blocks.md#html), and
-            [`format\{\}`](blocks.md#format) because then you do not have to escape every
-            instance of special characters like `\{`, `\}`, and `\\`. It works as long as there
-            is a closing bracket `\{` to correspond with every opening bracket `\}`. To enable
-            brace-escape mode, open and close the block with double curly brackets:
+            }
+            ~p {
+                [b]Brace-escape[/b]. Sometimes it may be desirable to disable all parsing within a
+                particular block. This is especially useful for things like
+                [[ [c]code\{\}[/c] | blocks.md#code ]], [[ [c]html\{\}[/c] | blocks.md#html ]], and
+                [[ [c]format\{\}[/c] | blocks.md#format ]] because then you do not have to escape every
+                instance of special characters like [c]\{[/c], [c]\}[/c], and [c]\\[/c]. It works as long as there
+                is a closing bracket [c]\{[/c] to correspond with every opening bracket [c]\}[/c]. To enable
+                brace-escape mode, open and close the block with double curly brackets\:
             }
             ~code [javascript] {
 code \{\{
