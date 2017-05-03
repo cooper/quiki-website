@@ -1,5 +1,6 @@
 @page.title:    wikifier;
 @page.author:   Mitchell Cooper;
+
 @category.wiki;
 @category.software;
 
@@ -14,6 +15,7 @@ infobox {
     Repository:             [[ wikifier on GitHub | https://github.com/cooper/wikifier ]];
     Website:                [[ http://wikifier.notroll.net ]];
 }
+
 sec {
     wikifier is a file-based wiki engine. It is unique in that it requires no
     database. It is so simple that it can be managed with nothing more than a
@@ -33,6 +35,7 @@ sec {
         July 2015:      [[ wp: NASA ]] takes a close-up photo of Pluto.;
     }
 }
+
 /* Documentation section taken from readme.md.page */
     ~sec [Documentation] {
         ~p {
@@ -121,6 +124,7 @@ sec [Components] {
         the web server.
     }
 }
+
 sec [Frontends] {
     These frontends connect to a wikiserver and deliver content to end users.
     sec [quiki] {
@@ -136,6 +140,7 @@ sec [Frontends] {
         therefore runs on a variety of web servers.
     }
 }
+
 sec [Interfaces] {
     These programming interfaces can be used to incorporate wikifier into
     other web servers.
