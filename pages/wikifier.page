@@ -4,7 +4,7 @@
 @category.software;
 
 infobox { 
-    image { 
+    image {  
         file: wikifier-logo.png;
     }; 
     :The wikifier logo, created in [[ Microsoft[&reg] Word | wp: Microsoft Word]];
