@@ -38,6 +38,7 @@ sec {
 
 /* Documentation section taken from readme.md.page */
     ~sec [Documentation] {
+        meta { section: documentation; }
         ~p {
             General
         }
@@ -78,6 +79,14 @@ sec {
             ;
             ~p {
                 [[ Components | doc/technical/components.md ]] - wikifier programming interfaces
+            }
+            ;
+            ~p {
+                [[ Page | doc/technical/page.md ]] - Wikifier\:\:Page API
+            }
+            ;
+            ~p {
+                [[ Wiki | doc/technical/wiki.md ]] - Wikifier\:\:Wiki API
             }
             ;
             ~p {
