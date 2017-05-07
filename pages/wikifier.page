@@ -36,7 +36,7 @@ sec {
     }
 }
 
-/* Documentation section taken from readme.md.page */
+/* Documentation section taken from readme.page */
     ~sec [Documentation] {
         meta { section: documentation; }
         ~p {
@@ -44,27 +44,27 @@ sec {
         }
         ~list {
             ~p {
-                [[ Language | doc/language.md ]]           - wikifier language specification
+                [[ Language | doc/language ]]           - wikifier language specification
             }
             ;
             ~p {
-                [[ Configuration | doc/configuration.md ]] - wikifier configuration
+                [[ Configuration | doc/configuration ]] - wikifier configuration
             }
             ;
             ~p {
-                [[ Blocks | doc/blocks.md ]]               - wikifier built-in block types
+                [[ Blocks | doc/blocks ]]               - wikifier built-in block types
             }
             ;
             ~p {
-                [[ Models | doc/models.md ]]               - wikifier templates
+                [[ Models | doc/models ]]               - wikifier templates
             }
             ;
             ~p {
-                [[ Styling | doc/styling.md ]]             - wikifier + CSS
+                [[ Styling | doc/styling ]]             - wikifier + CSS
             }
             ;
             ~p {
-                [[ Markdown | doc/markdown.md ]]           - wikifier + Markdown
+                [[ Markdown | doc/markdown ]]           - wikifier + Markdown
             }
             ;
             
@@ -74,23 +74,23 @@ sec {
         }
         ~list {
             ~p {
-                [[ Parsing | doc/technical/parsing.md ]]       - wikifier parsing stages
+                [[ Parsing | doc/technical/parsing ]]       - wikifier parsing stages
             }
             ;
             ~p {
-                [[ Components | doc/technical/components.md ]] - wikifier programming interfaces
+                [[ Components | doc/technical/components ]] - wikifier programming interfaces
             }
             ;
             ~p {
-                [[ Page | doc/technical/page.md ]] - Wikifier\:\:Page API
+                [[ Page | doc/technical/page ]] - Wikifier\:\:Page API
             }
             ;
             ~p {
-                [[ Wiki | doc/technical/wiki.md ]] - Wikifier\:\:Wiki API
+                [[ Wiki | doc/technical/wiki ]] - Wikifier\:\:Wiki API
             }
             ;
             ~p {
-                [[ Commands | doc/technical/server-commands.md ]] - wikiserver commands
+                [[ Commands | doc/technical/server-commands ]] - wikiserver commands
             }
             ;
             
