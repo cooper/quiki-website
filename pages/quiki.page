@@ -1,0 +1,95 @@
+@page.title: quiki;
+@page.author: Markdown;
+@page.generated;
+
+
+/* !!! DO NOT EDIT THIS PAGE !!!
+   This page is auto-generated from quiki.md. Any changes will be overwritten
+   the next time the page is generated. Instead, edit quiki.md directly.
+*/
+
+~sec [quiki] {
+    meta { section: quiki; }
+    ~p {
+        quiki is a fully-featured wiki suite and standalone web server that is
+        completely file-based. instead of storing content in a database, each page is
+        represented by a text file written in a clean and productive
+        [[ source language | https://github.com/cooper/wikifier/blob/master/doc/language ]].
+    }
+    ~p {
+        the underlying [[ wikifier | https://github.com/cooper/wikifier ]] engine offers
+        image generation, category management,
+        [[ templates | https://github.com/cooper/wikifier/blob/master/doc/models ]],
+        [[ markdown integration | https://github.com/cooper/wikifier/blob/master/doc/markdown ]],
+        git-based revision tracking, and much more.
+        [[ adminifier | https://github.com/cooper/adminifier ]], a sister project, is a wiki
+        administrative panel featuring a web-based editor.
+    }
+    ~list {
+        ~p {
+            [[ install | #install ]]
+        }
+        ;
+        ~p {
+            [[ configure | #configure ]]
+        }
+        ;
+        ~p {
+            [[ run | #run ]]
+        }
+        ;
+        
+    }
+    ~sec [install] {
+        meta { section: install; }
+        ~p {
+            you need [[ perl | http://perl.org ]],
+            [[ cpanm | https://metacpan.org/pod/App::cpanminus ]], and [[ go | http://golang.org ]].
+        }
+        ~p {
+            the wikifier engine is included as a submodule of this repository, so it does
+            not need to be installed manually.
+        }
+        ~p {
+            install wikifier dependencies\:
+        }
+        ~code {
+cpanm GD Git::Wrapper HTTP::Date HTML::Strip HTML::Entities JSON::XS URI::Escape
+}
+~p {
+            install quiki\:
+        }
+        ~code {
+go get github.com/cooper/quiki
+cd $GOPATH/src/github.com/cooper/quiki
+git submodule update --init
+}
+
+    }
+    ~sec [configure] {
+        meta { section: configure; }
+        ~p {
+            copy and edit the example configuration\:
+        }
+        ~code {
+cp quiki.conf.example quiki.conf
+nano -w quiki.conf
+}
+~p {
+            there is also a detailed [[ configuration spec | doc/configuration ]].
+        }
+        
+    }
+    ~sec [run] {
+        meta { section: run; }
+        ~p {
+            run quiki from your GOPATH\:
+        }
+        ~code {
+$GOPATH/bin/quiki quiki.conf
+}
+
+    }
+    
+}
+
