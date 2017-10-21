@@ -1,8 +1,8 @@
-@page.title:    wikifier;
-@page.author:   Mitchell Cooper;
+@page.title:     wikifier;
+@page.author:    Mitchell Cooper;
 
-@category.wiki;
 @category.software;
+@category.wiki;
 
 infobox { 
     image {  
