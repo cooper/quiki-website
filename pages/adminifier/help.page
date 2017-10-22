@@ -1,7 +1,11 @@
-@page.title: adminifier help page;
--@page.enable.title;
+@page.title:      adminifier help page;
+@page.author:     Mitchell Cooper;
+@page.created:    1508680601;
 
 @category.adminifier;
+
+-@page.enable.title;
+
 
 sec [I need help with...] {
     $documentation {}
