@@ -1,4 +1,5 @@
-@model.author: Mitchell Cooper;
+@page.title: wikifier documentation links;
+@page.author: Mitchell Cooper;
 
 ~p {
             General
