@@ -1,6 +1,8 @@
 @page.title: adminifier help page;
 -@page.enable.title;
 
+@category.adminifier;
+
 sec [I need help with...] {
     $documentation {}
 }
