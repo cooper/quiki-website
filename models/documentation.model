@@ -1,4 +1,4 @@
-@page.author: Mitchell Cooper;
+@model.author: Mitchell Cooper;
 
 ~p {
             General
