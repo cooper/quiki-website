@@ -1,14 +1,8 @@
 @page.title:     wikifier;
 @page.author:    Mitchell Cooper;
 
-@category.asdflol;
-@category.ha_lol;
 @category.software;
 @category.wiki;
-
-@category.hi-there;
-
-@category.hi-there;
 
 infobox { 
     image {  
