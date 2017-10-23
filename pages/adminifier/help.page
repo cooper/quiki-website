@@ -7,7 +7,7 @@
 -@page.enable.title;
 
 
-sec [I need help with...] {
+sec [I need help with...] { 
     $documentation {}
 }
 
