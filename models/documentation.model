@@ -55,6 +55,9 @@
                 [[ Commands | doc/technical/server-commands ]] - wikiserver commands
             }
             ;
+            ~p {
+                [[ Log types | doc/technical/log-types ]] - Wikifier::Wiki log types
+            };
             
         }
 
