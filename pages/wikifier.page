@@ -6,7 +6,7 @@
 @category.wiki;
 
 infobox { 
-    image {  
+    image {
         file: wikifier-logo.png;
     }; 
     :The wikifier logo, created in [[ Microsoft[&reg] Word | wp: Microsoft Word ]];
@@ -37,66 +37,8 @@ sec {
     }
 }
 
-/* Documentation section taken from readme.page */
     ~sec [Documentation] {
-        meta { section: documentation; }
-        ~p {
-            General
-        }
-        ~list {
-            ~p {
-                [[ Language | doc/language ]]           - wikifier language specification
-            }
-            ;
-            ~p {
-                [[ Configuration | doc/configuration ]] - wikifier configuration
-            }
-            ;
-            ~p {
-                [[ Blocks | doc/blocks ]]               - wikifier built-in block types
-            }
-            ;
-            ~p {
-                [[ Models | doc/models ]]               - wikifier templates
-            }
-            ;
-            ~p {
-                [[ Styling | doc/styling ]]             - wikifier + CSS
-            }
-            ;
-            ~p {
-                [[ Markdown | doc/markdown ]]           - wikifier + Markdown
-            }
-            ;
-            
-        }
-        ~p {
-            Technical
-        }
-        ~list {
-            ~p {
-                [[ Parsing | doc/technical/parsing ]]       - wikifier parsing stages
-            }
-            ;
-            ~p {
-                [[ Components | doc/technical/components ]] - wikifier programming interfaces
-            }
-            ;
-            ~p {
-                [[ Page | doc/technical/page ]] - Wikifier\:\:Page API
-            }
-            ;
-            ~p {
-                [[ Wiki | doc/technical/wiki ]] - Wikifier\:\:Wiki API
-            }
-            ;
-            ~p {
-                [[ Commands | doc/technical/server-commands ]] - wikiserver commands
-            }
-            ;
-            
-        }
-        
+	$documentation {}	        
     }
 sec [Components] {
     wikifier is split up into several packages. They are listed below, with
