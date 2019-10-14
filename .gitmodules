@@ -1,0 +1,3 @@
+[submodule "quiki"]
+	path = quiki
+	url = https://github.com/cooper/quiki.git
