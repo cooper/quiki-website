@@ -7,14 +7,14 @@
 
 infobox { 
     image {
-        file: wikifier-logo.png;
+        file: quiki.png;
     }; 
-    :The wikifier logo, created in [[ Microsoft[&reg] Word | wp: Microsoft Word ]];
+    :The quiki logo, created in [[ Microsoft[&reg] Word | wp: Microsoft Word ]];
     Type:                   [[ Wiki engine | wp: Wiki software ]]; 
     Initial release:        February 2013;
     Author:                 [[ Mitchell Cooper | https://github.com/cooper ]];
     Repository:             [[ wikifier on GitHub | https://github.com/cooper/wikifier ]];
-    Website:                [[ http://wikifier.notroll.net ]];
+    Website:                [[ https://wikifier.mitchellcooper.me ]];
 }
 
 sec {
