@@ -1,8 +1,8 @@
 @page.title: It's not just for wikis.;
 
-Just because quiki websites are written in [[ productive, super-legible markup | /doc/language ]]
+Just because quiki pages are written in [[ productive, super-legible markup | /doc/language ]]
 doesn't mean it's only good for encyclopedias. It's even better for building gorgeous websites
-like [[ this one | $ /file ]].
+with infinitesimal effort.
 
 [THE OVERVIEW] {
     list {  /* Diamonds. */
@@ -19,7 +19,7 @@ like [[ this one | $ /file ]].
         Anyone can read it. Anyone can write it.
         That's the goal of the quiki [[ source language | /doc/language ]]. I like to think of it as
         a better structured, [[ more extensibe | /doc/blocks ]] alternative to Markdown; but if you
-        like Markdown better, not to worry[---]quiki serves those files too.
+        like Markdown more, not to worry[---]quiki serves those files too.
     }
 
     [Ditch the database.] {

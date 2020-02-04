@@ -11,21 +11,21 @@ a {
     transition: color 0.2s;
 }
 
-header.header-main {
+header.header {
     height: 90px;
     color: #fff;
     text-shadow: 1px 1px 2px #333;
 }
 
-.header-left {
+.header .left, .footer .left {
     float: left;
     font-size: 50px;
     line-height: 90px;
-    margin-left: 25px;
+    margin: 0 25px;
     font-family: 'Kalam', cursive;
 }
 
-.header-right {
+.header .right, .footer .right {
     float: right;
 }
 
@@ -180,7 +180,7 @@ div.container {
     padding: 0.3em 0.6em;
     margin: 0.5em 0;
     display: inline-block;
-    transition: background-color 0.2, color 0.2s, border-color 0.2s;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
     border-radius: 2px;
 }
 
@@ -188,4 +188,28 @@ div.container {
     background-color: #fff;
     border-color: #4f6079;
     color: #4f6079; 
+}
+
+.footer {
+    height: 90px;
+    line-height: 90px;
+}
+
+.footer .right {
+    padding-right: 30px;
+}
+
+.mitchellcooper {
+    background-color: #fff;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 2px;
+}
+
+.mitchellcooper:hover {
+    background-color: rgb(127, 255, 0);
+    color: #00873B;
 }
