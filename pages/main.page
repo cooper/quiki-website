@@ -1,0 +1,56 @@
+@page.title: It's not just for wikis.;
+
+Just because quiki websites are written in [[ productive, super-legible markup | /doc/language ]]
+doesn't mean it's only good for encyclopedias. It's even better for building gorgeous websites
+like [[ this one | $ /file ]].
+
+[THE OVERVIEW] {
+    list {  /* Diamonds. */
+        Crystal clear code.;            /* quiki Q and Markdown M with arrow logos side by side */
+        Edit on the web.;               /* icons for text formatting/etc */
+        Revision tracking.;             /* git logo */
+        Load balancing.;                /* multiple servers */
+        Super portable.;                /* go gopher? */
+    }
+}
+
+[THE BREAKDOWN] {
+    [Clean. Productive. Clear.] {
+        Anyone can read it. Anyone can write it.
+        That's the goal of the quiki [[ source language | /doc/language ]]. I like to think of it as
+        a better structured, [[ more extensibe | /doc/blocks ]] alternative to Markdown; but if you
+        like Markdown better, not to worry[---]quiki serves those files too.
+    }
+
+    [Ditch the database.] {
+        quiki started as a simple script to convert plain text files to HTML and CSS. Through its
+        evolution into a featureful, ready-from-the-box web engine, its backbones remained true to those
+        humble beginnings[---]a quiki website can be easily read and written in even the most
+        unsophisticated of text editors.
+    }
+
+    [Do your web work, on the web.] {
+        With a built-in administrative web panel, your sites can be configured and edited right in the
+        browser. That makes quiki great for all sorts of applications, even blogs whose writers might not
+        have the technical know-how to access a text-based editor on the server command line.
+    }
+
+    [Draft and redraft. No wait! Revert.] {
+        The nice thing about using plain text files is that amazing tools just so happen to already exist
+        for the revision tracking of such files. Each quiki website is a git repository. Use branches to
+        draft and preview pages before merging them in for public view. All of this and more in your
+        browser or terminal, your choice.
+    }
+
+    [Let your servers Gossip.] {
+        It's a new kind of load balancing, one that pretty much takes care of itself. Kindly introduce a
+        few quiki servers and leave them to the talking. They'll keep each other in the know about juicy
+        new content and fetch the latest right away.
+    }
+
+    [It's all one piece.] {
+        No dependencies. No confusing setup. There is but one moving part, and that part can move to just
+        about anywhere. That's the glory of being [[ written in Go | https://github.com/cooper/quiki ]]:
+        the entire suite is compiled into one self-contained, ultra portable binary.
+    }
+}
