@@ -63,8 +63,8 @@ a img {
 .navigation {
     list-style-type: none;
     color: #fff;
-    float: right;
     margin: 18px 0;
+    padding: 0;
 }
 
 .navigation li {
@@ -73,7 +73,7 @@ a img {
 
 .navigation li a {
     font-size: 1.1em;
-    margin-right: 15px;
+    margin: 0 15px;
     text-transform: lowercase;
     border-bottom: 2px solid transparent;
     padding: 8px 10px;
