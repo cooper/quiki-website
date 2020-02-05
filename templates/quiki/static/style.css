@@ -24,6 +24,7 @@ a img {
 
 #header {
     height: 70px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #header-bg {
@@ -39,14 +40,13 @@ a img {
 #header h1 {
     height: 100%;
     line-height: 70px;
-    display: inline-block;
     float: left;
     margin: 0;
+    font-family: 'Kalam', cursive;
 }
 
 #header img {
     margin: 10px;
-    display: inline-block;
     float: left;
     height: 50px;
     filter: brightness(0) invert(1);
