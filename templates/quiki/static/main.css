@@ -215,7 +215,6 @@ div.container {
     color: #00873B;
 }
 
-
 @media (max-width: 1100px) {
     .main-leftright, .main-leftright:nth-child(even) {
 		flex-direction: column;
@@ -237,4 +236,10 @@ div.container {
 	p {
 		max-width: 900px;
 	}
+}
+
+@media (max-width: 850px) {
+    ul.main-page-navigation li {
+        float: none;
+    }
 }
