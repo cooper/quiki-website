@@ -26,7 +26,7 @@
             <h2>
                 Just because quiki pages are written in <a href="/page/doc/language">super-legible markup</a>
                 doesn't mean it's only good for encyclopedias. It's even better for building
-                dazzling websites <span>with infinitesimal effort</span>.
+                dazzling websites with <span>infinitesimal effort</span>.
             </h2>
         </div>
     </div>
@@ -50,7 +50,7 @@
                     Revision tracking
                 </div>
             </a>
-            <div style="display: inline-block; white-space: nowrap;">
+            <div class="main-overview-last-two-items">
                 <a href="#load-balancing">
                     <div class="main-overview-item">
                         <div class="main-overview-icon"><i class="fa fa-server"></i></div>

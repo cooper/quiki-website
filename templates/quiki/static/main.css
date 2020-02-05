@@ -126,6 +126,11 @@ div.container {
     transition: background-color 0.3s;
 }
 
+.main-overview-last-two-items {
+    display: inline-block; 
+    white-space: nowrap;
+}
+
 .main-overview-item:hover .main-overview-icon {
     background-color: #4f6079;
 }
@@ -268,5 +273,11 @@ div.container {
 
     .main-middle-wrapper h1 {
         margin: 50px auto;
+    }
+}
+
+@media (max-width: 550px) {
+    .main-overview-last-two-items {
+        white-space: normal;
     }
 }
