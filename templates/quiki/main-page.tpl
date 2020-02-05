@@ -24,7 +24,7 @@
         <div class="main-middle-wrapper">
             <h1>It's not <em>just</em> for wikis.</h1>
             <h2>
-                Just because quiki pages are written in <a href="/page/doc/language">super-legible markup</a>
+                Just because quiki pages are written in <a href="/doc/language">super-legible markup</a>
                 doesn't mean it's only good for encyclopedias. It's even better for building
                 dazzling websites with <span>infinitesimal effort</span>.
             </h2>
@@ -72,11 +72,11 @@
                 <h1><span>Clean. Productive. Clear.</span></h1>
                 <p>
                     Anyone can read it. Anyone can write it.
-                    That's the goal of the quiki <a href="/page/doc/language">source language</a>. I like to think of it as
-                    a better structured, <a href="/page/doc/blocks">more extensible</a> alternative to Markdown; but if you
+                    That's the goal of the quiki <a href="/doc/language">source language</a>. I like to think of it as
+                    a better structured, <a href="/doc/blocks">more extensible</a> alternative to Markdown; but if you
                     like Markdown more, not to worry&mdash;quiki serves those files too.
                 </p>
-                <a class="button" href="/page/doc/language">Learn to speak quiki</a>
+                <a class="button" href="/doc/language">Learn to speak quiki</a>
             </div>
             <img alt="alt" src="{{.StaticRoot}}/language.png" />
         </div>
@@ -101,7 +101,7 @@
                     browser. That makes quiki great for all sorts of applications, even blogs whose writers might not
                     have the technical know-how to access a text-based editor on the server command line.
                 </p>
-                <a class="button" href="/page/adminifier">About adminifier</a>
+                <a class="button" href="/adminifier">About adminifier</a>
             </div>
             <img alt="alt" src="{{.StaticRoot}}/adminifier.png" />
         </div>
@@ -114,7 +114,7 @@
                     draft and preview pages before merging them in for public view. All of this and more in your
                     browser or terminal.
                 </p>
-                <a class="button" href="/page/git">About quiki + git</a>
+                <a class="button" href="/git">About quiki + git</a>
             </div>
             <img alt="alt" src="{{.StaticRoot}}/revisions.png" />
         </div>
@@ -127,7 +127,7 @@
                     few quiki servers and leave them to the talking. They'll keep each other in the know about juicy
                     new content and fetch the latest right away.
                 </p>
-                <a class="button" href="/page/gossip">About Gossip</a>
+                <a class="button" href="/gossip">About Gossip</a>
             </div>
             <img alt="alt" src="{{.StaticRoot}}/cluster.png" />
         </div>
@@ -140,7 +140,7 @@
                     the entire quiki suite is compiled into one self-contained, ultra portable binary
                     that ships with a working configuration.
                 </p>
-                <a class="button" href="/page/get-started">Get started</a>
+                <a class="button" href="/get-started">Get started</a>
             </div>
             <img alt="alt" src="{{.StaticRoot}}/all-one-piece.svg" />
         </div>
@@ -153,5 +153,5 @@
         &copy; 2020
         <a class="mitchellcooper" href="https://mitchellcooper.me">Mitchell Cooper</a>
     </div>
-    Need help? <a href="/page/support">Let's talk</a>.
+    Need help? <a href="/support">Let's talk</a>.
 </footer>
