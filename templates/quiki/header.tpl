@@ -17,6 +17,7 @@
 </head>
 
 <body>
+<div id="header-bg"></div>
 
 <header class="header">
     <div class="left">
