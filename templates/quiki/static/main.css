@@ -241,10 +241,11 @@ div.container {
 @media (max-width: 850px) {
     .header .right {
         float: none;
+        clear: both;
     }
     ul.main-page-navigation li {
         float: none;
-        margin: 15px 0;
+        margin: 25px 0;
     }
     ul.main-page-navigation li a {
         background-color: #fff;
