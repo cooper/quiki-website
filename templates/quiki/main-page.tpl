@@ -140,7 +140,7 @@
                     the entire quiki suite is compiled into one self-contained, ultra portable binary
                     that ships with a working configuration.
                 </p>
-                <a class="button" href="/page/readme">Get started</a>
+                <a class="button" href="/page/get-started">Get started</a>
             </div>
             <img alt="alt" src="{{.StaticRoot}}/all-one-piece.svg" />
         </div>
