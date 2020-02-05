@@ -276,7 +276,20 @@ div.container {
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 500px) {
+    .main-overview-item {
+        display: block;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .main-overview-icon {
+        width: 250px;
+        height: 250px;
+        line-height: 250px;
+        font-size: 90px;
+    }
+
     .main-overview-last-two-items {
         white-space: normal;
     }
