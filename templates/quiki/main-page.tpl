@@ -48,7 +48,7 @@
                     Revision tracking
                 </div>
             </a>
-            <div style="white-space: nowrap;">
+            <div style="display: inline-block; white-space: nowrap;">
                 <a href="#load-balancing">
                     <div class="main-overview-item">
                         <div class="main-overview-icon"><i class="fa fa-server"></i></div>
