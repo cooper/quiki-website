@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>{{.VisibleTitle}}</title>
     <link rel="stylesheet" type="text/css" href="/static/quiki.css" />
-    <link rel="stylesheet" type="text/css" href="{{.StaticRoot}}/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="{{.StaticRoot}}/style.css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,500%7COpen+Sans%7CKalam" />
     <link rel="icon" type="image/png" href="{{.StaticRoot}}/favicon.png" />
     {{with .PageCSS}}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <title>quiki</title>
+    <title>{{.WikiTitle}}</title>
     <link rel="stylesheet" type="text/css" href="{{.StaticRoot}}/style.css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,500%7COpen+Sans%7CKalam" />
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.2/css/all.css" />
