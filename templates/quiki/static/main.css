@@ -240,7 +240,7 @@ div.container {
 
 @media (max-width: 850px) {
     .header {
-        height: auto;
+        height: auto !important;
     }
 
     .header .left, .header .right {
