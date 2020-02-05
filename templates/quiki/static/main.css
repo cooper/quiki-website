@@ -239,18 +239,26 @@ div.container {
 }
 
 @media (max-width: 850px) {
-    .header .right {
+    .header .left, .header .right {
         float: none;
         clear: both;
+        text-align: center;
     }
+    
     ul.main-page-navigation li {
         float: none;
         margin: 25px 0;
     }
+
     ul.main-page-navigation li a {
+        display: block;
         background-color: #fff;
         color: #4f6079;
         text-shadow: none;
         border-color: #4f6079;
+    }
+
+    .main-middle-wrapper {
+        clear: both;
     }
 }
