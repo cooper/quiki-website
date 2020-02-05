@@ -1,0 +1,38 @@
+
+.navigation {
+    list-style-type: none;
+    color: #fff;
+}
+
+.navigation li {
+    float: left;
+}
+
+.navigation li a {
+    font-size: 1.1em;
+    margin-right: 15px;
+    text-transform: lowercase;
+    border-bottom: 2px solid transparent;
+    padding: 8px 10px 6px 10px;
+    color: #fff;
+    border-radius: 2px 2px 0 0; /* not bottom because on main page the underline */
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.main .navigation li a {
+    border-color: #fff;
+}
+
+.navigation li a:hover {
+    background-color: #637595;
+    color: #fff;
+    border-color: #fff;
+    border-radius: 2px; /* apply to underline also */
+}
+
+.main .navigation li a:hover {
+    background-color: #fff;
+    color: #4f6079;
+    border-color: #4f6079;
+    text-shadow: none;
+}

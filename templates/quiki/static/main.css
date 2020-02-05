@@ -29,34 +29,6 @@ header.header {
     float: right;
 }
 
-ul.main-page-navigation {
-    list-style-type: none;
-}
-
-ul.main-page-navigation li {
-    float: left;
-}
-
-ul.main-page-navigation li a {
-    font-size: 1.1em;
-    margin-right: 15px;
-    text-transform: lowercase;
-    border-bottom: 2px solid #fff;
-    padding: 8px 10px 6px 10px;
-    /* font-weight: bold; */
-    color: #fff;
-    transition: background-color 0.2s, border-color 0.2s;
-    border-radius: 2px 2px 0 0;
-}
-
-ul.main-page-navigation li a:hover {
-    background-color: #fff;
-    color: #4f6079;
-    text-shadow: none;
-    border-color: #4f6079;
-    border-radius: 2px;
-}
-
 div.container {
     max-width: 1100px;
     margin: auto;
@@ -262,12 +234,12 @@ div.container {
         text-align: center;
     }
 
-    ul.main-page-navigation li {
+    .navigation li {
         float: none;
         margin: 25px 0;
     }
 
-    ul.main-page-navigation li a {
+    .navigation li a {
         display: block;
         background-color: #fff;
         color: #4f6079;

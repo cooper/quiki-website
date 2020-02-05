@@ -23,7 +23,7 @@ a img {
 }
 
 #header {
-    height: 70px;
+    height: 60px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -31,7 +31,7 @@ a img {
     position: absolute;
     top: 0;
     left: 0;
-    height: 70px;
+    height: 60px;
     width: 100%;
     background-color: #4f6079;
     z-index: -1;
@@ -39,7 +39,7 @@ a img {
 
 #header h1 {
     height: 100%;
-    line-height: 70px;
+    line-height: 64px;
     float: left;
     margin: 0;
     font-family: 'Kalam', cursive;
@@ -61,22 +61,6 @@ a img {
 #header a:hover {
     color: #B3ECFF;
 }
-
-#navigation {
-    padding: 0;
-    margin: 22px 15px 0 0;
-    float: right;
-    height: 30px;
-}
-
-#navigation li {
-    display: inline-block;
-    margin-left: 15px;
-    background-color: #637595;
-    text-transform: lowercase;
-    padding: 5px;
-}
-
 
 a,
 .q-main a,
