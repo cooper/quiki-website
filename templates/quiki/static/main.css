@@ -239,7 +239,17 @@ div.container {
 }
 
 @media (max-width: 850px) {
+    .header .right {
+        float: none;
+    }
     ul.main-page-navigation li {
         float: none;
+        margin: 15px 0;
+    }
+    ul.main-page-navigation li a {
+        background-color: #fff;
+        color: #4f6079;
+        text-shadow: none;
+        border-color: #4f6079;
     }
 }
