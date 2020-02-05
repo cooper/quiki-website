@@ -133,8 +133,8 @@
                 <p>
                     No dependencies. No confusing setup. There is but one moving part, and that part can move just
                     about anywhere. That's the glory of being <a href="https://github.com/cooper/quiki">written in Go</a>:
-                    the entire quiki suite is compiled into one self-contained, ultra portable binary.
-                    It even ships with a working configuration.
+                    the entire quiki suite is compiled into one self-contained, ultra portable binary
+                    that ships with a working configuration.
                 </p>
                 <a class="button" href="/page/readme">Get started</a>
             </div>
