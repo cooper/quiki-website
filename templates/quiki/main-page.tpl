@@ -87,7 +87,7 @@
                 </p>
                 <a class="button" href="/file/pages/">See how content is stored</a>
             </div>
-            <img alt="alt" src="{{.StaticRoot}}/bg.jpg" />
+            <img alt="alt" src="{{.StaticRoot}}/terminal.png" />
         </div>
         <div class="main-leftright" id="edit-on-the-web">
             <div class="main-leftright-content">
