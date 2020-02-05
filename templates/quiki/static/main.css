@@ -273,6 +273,7 @@ div.container {
         color: #4f6079;
         text-shadow: none;
         border-color: #4f6079;
+        border-radius: 2px;
     }
 
     .main-middle-wrapper {
