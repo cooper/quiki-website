@@ -31,19 +31,19 @@ a img {
     border: none;
 }
 
-.header {
+header {
     height: 60px;
     color: #fff;
     background-color: #4f6079;
 }
 
-.main .header {
+.main header {
     height: 90px;
     background-color: transparent;
     text-shadow: 1px 1px 2px #333;
 }
 
-.header .left, .footer .left {
+header .left, footer .left {
     float: left;
     font-size: 40px;
     line-height: 60px;
@@ -51,12 +51,12 @@ a img {
     font-family: 'Kalam', cursive;
 }
 
-.main .header .left {
+.main header .left, .main footer .left {
     font-size: 50px;
     line-height: 90px;
 }
 
-.header .right, .footer .right {
+header .right, footer .right {
     float: right;
 }
 
@@ -257,12 +257,12 @@ div.container {
     color: #4f6079; 
 }
 
-.footer {
+footer {
     height: 90px;
     line-height: 90px;
 }
 
-.footer .right {
+footer .right {
     padding-right: 30px;
 }
 
@@ -305,15 +305,15 @@ div.container {
 }
 
 @media (max-width: 850px) {
-    .header, .footer {
+    header, footer {
         height: auto !important;
     }
 
-    .footer {
+    footer {
         text-align: center;
     }
 
-    .header .left, .header .right, .footer .left, .footer .right {
+    header .left, header .right, footer .left, footer .right {
         float: none;
         clear: both;
         text-align: center;
