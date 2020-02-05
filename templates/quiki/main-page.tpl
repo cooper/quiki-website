@@ -48,18 +48,20 @@
                     Revision tracking
                 </div>
             </a>
-            <a href="#load-balancing">
-                <div class="main-overview-item">
-                    <div class="main-overview-icon"><i class="fa fa-server"></i></div>
-                    Load balancing
-                </div>
-            </a>
-            <a href="#super-portable">
-                <div class="main-overview-item">
-                    <div class="main-overview-icon"><i class="fa fa-box"></i></div>
-                    Super portable
-                </div>
-            </a>
+            <div style="white-space: nowrap;">
+                <a href="#load-balancing">
+                    <div class="main-overview-item">
+                        <div class="main-overview-icon"><i class="fa fa-server"></i></div>
+                        Load balancing
+                    </div>
+                </a>
+                <a href="#super-portable">
+                    <div class="main-overview-item">
+                        <div class="main-overview-icon"><i class="fa fa-box"></i></div>
+                        Super portable
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
     <div class="main-breakdown">
