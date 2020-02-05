@@ -248,6 +248,10 @@ div.container {
         height: auto !important;
     }
 
+    .footer {
+        text-align: center;
+    }
+
     .header .left, .header .right, .footer .left, .footer .right {
         float: none;
         clear: both;
