@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{{.StaticRoot}}/main.css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,500%7COpen+Sans%7CKalam" />
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link rel="icon" type="image/png" href="{{.StaticRoot}}/favicon.png" />
 </head>
 <body>
     <div class="main-prior">
