@@ -1,6 +1,7 @@
 @page.title:    Support;
 @page.author:   Mitchell Cooper;
 
-
-To report a bug, please use the [[ issue tracker | https://github.com/cooper/quiki/issues ]].
-I am open to questions, ideas, and feature requests! Shoot an email to [[ help@quiki.app ]].
+sec {
+    To report a bug, please use the [[ issue tracker | https://github.com/cooper/quiki/issues ]].
+    I am open to questions, ideas, and feature requests! Shoot an email to [[ help@quiki.app ]].
+}
