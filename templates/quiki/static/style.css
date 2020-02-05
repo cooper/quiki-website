@@ -11,7 +11,7 @@ a img {
 #container {
     width: 970px;
     width: calc(100% - 150px);
-    max-width: 1000px;
+    max-width: 1300px;
     min-width: 850px;
     margin: 0 auto 50px auto;
 }
@@ -35,30 +35,6 @@ a img {
     z-index: -1;
 }
 
-#header h1 {
-    height: 100%;
-    line-height: 64px;
-    float: left;
-    margin: 0;
-    font-family: 'Kalam', cursive;
-    font-size: 3em;
-}
-
-#header img {
-    margin: 10px;
-    float: left;
-    height: 50px;
-    filter: brightness(0) invert(1);
-}
-
-#header a {
-    color: #fff;
-    text-decoration: none;
-}
-
-#header a:hover {
-    color: #B3ECFF;
-}
 
 a,
 .q-main a,

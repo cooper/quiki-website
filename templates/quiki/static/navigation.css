@@ -1,4 +1,27 @@
 
+.header {
+    height: 90px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #333;
+    background-color: #4f6079;
+}
+
+.main .header {
+    background-color: transparent;
+}
+
+.header .left, .footer .left {
+    float: left;
+    font-size: 50px;
+    line-height: 90px;
+    margin: 0 25px;
+    font-family: 'Kalam', cursive;
+}
+
+.header .right, .footer .right {
+    float: right;
+}
+
 .navigation {
     list-style-type: none;
     color: #fff;

@@ -19,22 +19,15 @@
 </head>
 
 <body>
-<div id="header-bg"></div>
-<div id="container">
-
-    <div id="header">
+<header class="header">
+    <div class="left">{{.WikiTitle}}</div>
+    <div class="right">
         <ul class="navigation">
             {{range .Navigation}}
                 <li><a href="{{.Link}}">{{.Display}}</a></li>
             {{end}}
         </ul>
-        <a href="{{.WikiRoot}}/">
-            {{with .Logo}}
-                {{.}}
-            {{else}}
-                <h1>{{.WikiTitle}}</h1>
-            {{end}}
-        </a>
     </div>
-
+</header>
+<div id="container">
     <div id="content">
