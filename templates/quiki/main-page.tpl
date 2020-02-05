@@ -125,7 +125,7 @@
                 </p>
                 <a class="button" href="/page/gossip">About Gossip</a>
             </div>
-            <img alt="alt" src="{{.StaticRoot}}/bg.jpg" />
+            <img alt="alt" src="{{.StaticRoot}}/cluster.png" />
         </div>
         <div class="main-leftright" id="super-portable">
             <div class="main-leftright-content">
