@@ -74,7 +74,7 @@
                 </p>
                 <a class="button" href="/page/doc/language">Learn to speak quiki</a>
             </div>
-            <img alt="alt" src="{{.StaticRoot}}/bg.jpg" />
+            <img alt="alt" src="{{.StaticRoot}}/language.jpg" />
         </div>
         <div class="main-leftright">
             <div class="main-leftright-content">
