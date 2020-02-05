@@ -85,7 +85,7 @@
                     humble beginnings&mdash;a quiki website can be easily read and written in even the most
                     unsophisticated of text editors.
                 </p>
-                <a class="button" href="/file/page">See how content is stored</a>
+                <a class="button" href="/file/pages/">See how content is stored</a>
             </div>
             <img alt="alt" src="{{.StaticRoot}}/bg.jpg" />
         </div>
@@ -134,6 +134,7 @@
                     No dependencies. No confusing setup. There is but one moving part, and that part can move just
                     about anywhere. That's the glory of being <a href="https://github.com/cooper/quiki">written in Go</a>:
                     the entire quiki suite is compiled into one self-contained, ultra portable binary.
+                    It even ships with a working configuration.
                 </p>
                 <a class="button" href="/page/readme">Get started</a>
             </div>
