@@ -5,7 +5,6 @@
     <title>{{.VisibleTitle}}</title>
     <link rel="stylesheet" type="text/css" href="/static/quiki.css" />
     <link rel="stylesheet" type="text/css" href="{{.StaticRoot}}/style.css" />
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,500%7COpen+Sans%7CKalam" />
     {{with .PageCSS}}
         <style type="text/css">
         {{.}}
@@ -25,6 +24,7 @@
             {{with .Logo}}
                 {{.}}
             {{else}}
+                <img src="{{.StaticRoot}}/emblem.png" />
                 {{.WikiTitle}}
             {{end}}
         </a>
