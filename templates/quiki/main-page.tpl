@@ -138,7 +138,7 @@
                 </p>
                 <a class="button" href="/page/readme">Get started</a>
             </div>
-            <img alt="alt" src="{{.StaticRoot}}/bg.jpg" />
+            <img alt="alt" src="{{.StaticRoot}}/all-one-piece.svg" />
         </div>
     </div>
 </body>
