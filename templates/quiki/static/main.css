@@ -288,6 +288,7 @@ div.container {
         height: 250px;
         line-height: 250px;
         font-size: 90px;
+        margin: auto;
     }
 
     .main-overview-last-two-items {
