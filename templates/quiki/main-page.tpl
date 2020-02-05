@@ -13,11 +13,9 @@
             <div class="left">quiki</div>
             <div class="right">
                 <ul class="main-page-navigation">
-                    <li><a href="#">Get Started</a></li>
-                    <li><a href="#">Language</a></li>
-                    <li><a href="#">Configuration</a></li>
-                    <li><a href="#">Code</a></li>
-                    <li><a href="#">Support</a></li>
+                    {{range .Navigation}}
+                        <li><a href="{{.Link}}">{{.Display}}</a></li>
+                    {{end}}
                 </ul>
             </div>
         </header>
