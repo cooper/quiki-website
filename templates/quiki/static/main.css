@@ -46,6 +46,7 @@ ul.main-page-navigation li a {
     /* font-weight: bold; */
     color: #fff;
     transition: background-color 0.2s, border-color 0.2s;
+    border-radius: 2px 2px 0 0;
 }
 
 ul.main-page-navigation li a:hover {
@@ -53,6 +54,7 @@ ul.main-page-navigation li a:hover {
     color: #4f6079;
     text-shadow: none;
     border-color: #4f6079;
+    border-radius: 2px;
 }
 
 div.container {
@@ -77,6 +79,7 @@ div.container {
     border: none;
     font-size: 2em;
     padding:  1em 0.8em;
+    border-radius: 2px;
 }
 
 .main-middle-wrapper h2 {
