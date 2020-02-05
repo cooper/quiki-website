@@ -112,7 +112,7 @@
                 </p>
                 <a class="button" href="/page/git">About quiki + git</a>
             </div>
-            <img alt="alt" src="{{.StaticRoot}}/drafting.jpg" />
+            <img alt="alt" src="{{.StaticRoot}}/revisions.png" />
         </div>
         <div class="main-leftright" id="load-balancing">
             <div class="main-leftright-content">
