@@ -244,11 +244,11 @@ div.container {
 }
 
 @media (max-width: 850px) {
-    .header {
+    .header, .footer {
         height: auto !important;
     }
 
-    .header .left, .header .right {
+    .header .left, .header .right, .footer .left, .footer .right {
         float: none;
         clear: both;
         text-align: center;
