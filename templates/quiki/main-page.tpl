@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <title>quiki</title>
-    <link rel="stylesheet" type="text/css" href="{{.StaticRoot}}/main.css" />
+    <link rel="stylesheet" type="text/css" href="{{.StaticRoot}}/style.css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,500%7COpen+Sans%7CKalam" />
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.2/css/all.css" />
 </head>
-<body>
+<body class="main">
     <div class="main-prior">
         <header class="header">
             <div class="left">quiki</div>
