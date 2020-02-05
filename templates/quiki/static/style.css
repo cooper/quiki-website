@@ -1,6 +1,5 @@
 body {
-    font-family: 'Helvetia Neue', Helvetica, Calibri, Arial, Sans, sans-serif;
-    font-size: 14px;
+    font-family: 'Open Sans', 'Helvetia Neue', Helvetica, Calibri, Arial, Sans, sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -24,7 +23,6 @@ a img {
 
 #header {
     height: 60px;
-    font-family: 'Open Sans', sans-serif;
 }
 
 #header-bg {
