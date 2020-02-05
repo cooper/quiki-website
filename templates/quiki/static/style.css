@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', 'Helvetia Neue', Helvetica, Calibri, Arial, Sans, sans-serif;
     padding: 0;
