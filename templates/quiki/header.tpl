@@ -17,26 +17,22 @@
 
 <body>
 <div id="header-bg"></div>
+<div id="container">
 
-<header class="header">
-    <div class="left">
+    <div id="header">
+        <ul id="navigation">
+            {{range .Navigation}}
+                <li><a href="{{.Link}}">{{.Display}}</a></li>
+            {{end}}
+        </ul>
         <a href="{{.WikiRoot}}/">
             {{with .Logo}}
                 {{.}}
             {{else}}
                 <img src="{{.StaticRoot}}/emblem.png" />
-                {{.WikiTitle}}
+                <h1>{{.WikiTitle}}</h1>
             {{end}}
         </a>
     </div>
-    <div class="right">
-        <ul class="main-page-navigation">
-            {{range .Navigation}}
-                <li><a href="{{.Link}}">{{.Display}}</a></li>
-            {{end}}
-        </ul>
-    </div>
-</header>
 
-<div id="container">
     <div id="content">
