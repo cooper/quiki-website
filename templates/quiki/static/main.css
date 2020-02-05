@@ -170,6 +170,7 @@ div.container {
 
 .main-leftright img {
     max-height: 380px;
+    max-width: 550px;
     margin: 30px;
 }
 
