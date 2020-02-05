@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.2/css/all.css" />
     <link rel="icon" type="image/png" href="{{.StaticRoot}}/favicon.png" />
 </head>
-<body>
+<body class="main">
     <div class="main-prior">
         <header class="header">
             <div class="left">quiki</div>

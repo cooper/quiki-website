@@ -21,21 +21,6 @@ a img {
     padding: 15px;
 }
 
-#header {
-    height: 60px;
-}
-
-#header-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 60px;
-    width: 100%;
-    background-color: #4f6079;
-    z-index: -1;
-}
-
-
 a,
 .q-main a,
 a.q-link-other,
@@ -53,6 +38,6 @@ a.q-link-internal:hover,
 a.q-link-external:hover,
 a.q-link-category:hover {
     color: #194695;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
