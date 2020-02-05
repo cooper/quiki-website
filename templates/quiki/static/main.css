@@ -239,12 +239,16 @@ div.container {
 }
 
 @media (max-width: 850px) {
+    .header {
+        height: auto;
+    }
+
     .header .left, .header .right {
         float: none;
         clear: both;
         text-align: center;
     }
-    
+
     ul.main-page-navigation li {
         float: none;
         margin: 25px 0;
@@ -260,5 +264,9 @@ div.container {
 
     .main-middle-wrapper {
         clear: both;
+    }
+
+    .main-middle-wrapper h1 {
+        margin: 50px auto;
     }
 }
