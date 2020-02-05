@@ -30,7 +30,7 @@ with infinitesimal effort.
     }
 
     [Do web work, on the web.] {
-        With a built-in administrative web panel, your sites can be configured and edited right in the
+        With the built-in adminifier web panel, your sites can be configured and edited right in the
         browser. That makes quiki great for all sorts of applications, even blogs whose writers might not
         have the technical know-how to access a text-based editor on the server command line.
     }
