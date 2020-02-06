@@ -12,7 +12,7 @@
 <body class="main">
     <div class="main-prior">
         <header class="header">
-            <div class="left">quiki</div>
+            <div class="left"><a href="{{.Root.Wiki}}/">{{.WikiTitle}}</a></div>
             <div class="right">
                 <ul class="navigation">
                     {{range .Navigation}}

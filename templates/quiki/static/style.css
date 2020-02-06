@@ -60,6 +60,10 @@ header .left, footer .left {
     line-height: 90px;
 }
 
+header .left a {
+    color: inherit;
+}
+
 header .right, footer .right {
     float: right;
 }

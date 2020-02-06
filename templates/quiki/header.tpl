@@ -19,7 +19,7 @@
 
 <body>
 <header class="header">
-    <div class="left">{{.WikiTitle}}</div>
+    <div class="left"><a href="{{.Root.Wiki}}/">{{.WikiTitle}}</a></div>
     <div class="right">
         <ul class="navigation">
             {{range .Navigation}}
