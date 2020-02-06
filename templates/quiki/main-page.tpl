@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="description" content="A file-based web engine and server featuring a productive source language, markdown, image generation, categories, templates, and revision tracking." />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
     <title>{{.WikiTitle}}</title>
     <link rel="stylesheet" type="text/css" href="{{.StaticRoot}}/style.css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,500%7COpen+Sans%7CKalam" />
