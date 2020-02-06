@@ -260,7 +260,7 @@ div.container {
 }
 
 .main-leftright .button:hover {
-    background-color: #fff;
+    background-color: inherit;
     border-color: #4f6079;
     color: #4f6079; 
 }
