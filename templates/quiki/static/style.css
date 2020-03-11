@@ -248,7 +248,7 @@ div.container {
     margin: 30px;
 }
 
-.button {
+.button, .q-main a.button {
     background-color: #637595;
     border: 2px solid #637595;
     color: #fff;
@@ -259,7 +259,7 @@ div.container {
     border-radius: 2px;
 }
 
-.button:hover {
+.button:hover, .q-main a.button:hover {
     background-color: inherit;
     border-color: #4f6079;
     color: #4f6079; 
