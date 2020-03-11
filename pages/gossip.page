@@ -1,0 +1,21 @@
+@page.title:	Gossip;
+@page.created:	1583938898;
+@page.author:	Mitchell Cooper;
+
+[b]Gossip[/b] is a feature within the quiki webserver that implements
+decentralized [[ load balancing | wp: Load balancing (computing) ]].
+
+Here's how it works.
+
+numlist {
+	User edits a page either with a text editor or online with [[adminifier]].;
+	User publishes the change to the public version of the site.;	
+	The built-in file monitor detects this change and begins serving it locally.;
+	The built-in [[git]] agent pushes this change to a remote.;
+	Gossip notifies other servers within the load balancing pool that new changes have been published.;
+	Other servers fetch the latest from the remote.;
+	Other servers begin serving the updated content.; 
+}
+
+This allows very simple and thoughtless load balancing. Make the changes
+[i]once[/i]; let the Gossip spread to take care of the rest.
