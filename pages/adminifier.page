@@ -1,0 +1,46 @@
+@page.title: adminifier;
+@page.created: 1583938898;
+@page.author: Mitchell Cooper;
+
+infobox [adminifier] {
+	image {
+		file:	adminifier.png;
+		alt:	adminifier screenshot;
+	};
+	Type:		Website administration panel;
+	Developers:	[[ Mitchell Cooper | https://mitchellcooper.me ]];
+	Written in:	[[ Go | wp: Go (programming language) ]];
+	License:	[[ ISC | wp: ISC license ]];
+	Repository:	[[ adminifier on GitHub | https://github.com/cooper/quiki/tree/master/adminifier ]];
+}
+
+[b]adminifier[/b] is quiki's optional site administration panel.
+While quiki sites can be easily edited and administered from a command line
+text editor, adminifier brings this environment to the web browser and enhances
+it with many additional convenient features, such as
+
+list {
+	Online page editor with sophisticated autocompletion and fillable forms to generate code;
+	Ability to view, compare, and revert specific [[revisions | git]];
+	Media upload tool;
+	Server administration panel for managing multiple sites;
+	Role-based user management for differing authority levels;
+	Site and server statistics;
+	Site and server configuration editors;
+}
+
+[Setup] {
+	adminifier is an optional module of the quiki webserver, but no
+	additional setup is required. It is enabled
+	in the default [[ configuration | doc/configuration ]] with the
+	following:
+
+	code{{
+		@adminifier.enable;           /* whether to enable adminifier */
+		@adminifier.host: ;           /* HTTP host for adminifier. leave blank to use all hosts */
+		@adminifier.root: /admin;     /* HTTP root for adminifier. leave blank to use /         */
+	}}
+
+	Optionally, you may change [c]adminifier.host[/c] and
+	[c]adminifier.root[/c] to configure the HTTP hostname and root path.
+}
