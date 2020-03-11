@@ -19,3 +19,8 @@ numlist {
 
 This allows very simple and thoughtless load balancing. Make the changes
 [i]once[/i]; let the Gossip spread to take care of the rest.
+
+$button {
+	text: Get started;
+	link: /get-started;
+}

@@ -44,3 +44,8 @@ list {
 	Optionally, you may change [c]adminifier.host[/c] and
 	[c]adminifier.root[/c] to configure the HTTP hostname and root path.
 }
+
+$button {
+	text: Get started;
+	link: /get-started;
+}
