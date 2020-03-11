@@ -3,5 +3,6 @@
 *.old
 *.save
 *.sock
+auth.json
 private/*
 cache/*
