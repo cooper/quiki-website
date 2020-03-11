@@ -1,5 +1,7 @@
 # Get started
 
+Let's get you up and running! It'll only take a minute or two.
+
 ## Install
 
 ```sh
@@ -8,8 +10,7 @@ go get github.com/cooper/quiki
 
 ## Configure
 
-quiki ships with a working example configuration.  
-There is also a detailed [configuration spec](doc/configuration.md).
+quiki ships with a working example configuration and detailed [configuration spec](doc/configuration.md).
 
 ```sh
 cp quiki.conf.example quiki.conf
