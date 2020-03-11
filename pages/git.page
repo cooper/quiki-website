@@ -1,0 +1,62 @@
+@page.title: Git;
+@page.created: 1583938898;
+@page.author: Mitchell Cooper;
+
+quiki's [b][[ git | https://git-scm.com ]][/b] integration makes it easy to manage
+revisions of a website.
+
+By using git to track your changes, you can
+
+list {
+	Revert specific changes (such as malicious ones), usually automatically
+		even if other independent changes have occurred since.;
+	Compare versions to see how content has changed over time.;
+	Determine which changes are attributed to specific users.;
+}
+
+[How it works] {
+	The most trivial revisioning insists that each specific change is
+	committed independently of other changes. That allows the change to
+	be selectively applied and reverted later. From the command line,
+	this is achieved like so:
+
+	code {{
+		nano -w pages/my.page		# User edits a page
+		git add pages/my.page		# User adds these changes
+		git commit -m "Edited my page"	# User commits the change with a justification
+	}}
+
+	More advanced users can draft versions of the website before
+	publishing them by using branches:
+
+	code {{
+		git checkout -b mychanges	# User creates and checks out new branch
+		nano -w pages/my.page		# User edits a page
+		git add pages/my.page		# User adds these changes
+		git commit -m "Rough draft"	# User commits the change to the new branch only
+	}}
+
+	Other changes are committed until the branch is ready to publish. Then,
+
+	code {{
+		git checkout master		# User returns to master branch (public website)
+		git merge mychanges		# User merges in the changes
+	}}
+}
+
+[adminifier integration] {
+	[[adminifier]] seamlessly integrates git in a way that's far less
+	intimidating to non-technical folk:
+	
+	list {
+		When a user makes edits, a new branch is transparently created
+			to allow them to draft and preview their changes.;
+		The quiki webserver allows only authenticated users with the
+			proper permissions to preview the site in this state,
+			at a different URL path than the public-facing site.;
+		When a user "Publishes" the changes, the branch is simply
+			merged into the master branch. Usually this is an
+			automatic procedure, but if conflicts occur, they are
+			presented online for the user to resolve.;
+	}
+}
