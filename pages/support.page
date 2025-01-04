@@ -2,6 +2,21 @@
 @page.author:   Mitchell Cooper;
 
 sec {
-    To report a bug, please use the [[ issue tracker | https://github.com/cooper/quiki/issues ]].
-    I am open to questions, ideas, and feature requests! Shoot an email to [[ mailto:help@quiki.app ]].
+	style {
+		max-width: 400px;
+		margin: 100px auto;
+	}
+
+	Thanks for your interest! Here to help if you need it and open to
+	ideas and feature requests too!
+	
+	$button {
+		text: Issue tracker;
+		link: https://github.com/cooper/quiki/issues;
+	}
+
+	$button {
+		text: Shoot an email;
+		link: mailto:quiki@rlygd.net;
+	}
 }

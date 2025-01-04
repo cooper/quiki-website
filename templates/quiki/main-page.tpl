@@ -151,7 +151,7 @@
 <footer class="footer">
     <div class="left">quiki</div>
     <div class="right">
-        &copy; 2020
+        &copy; 2025
         <a class="mitchellcooper" href="https://mitchellcooper.me">Mitchell Cooper</a>
     </div>
     Need help? <a href="/support">Let's talk</a>.
