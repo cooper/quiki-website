@@ -5,22 +5,19 @@ Let's get you up and running! It'll only take a minute or two.
 ## Install
 
 ```sh
-go get github.com/cooper/quiki
+go install github.com/cooper/quiki@latest
 ```
 
 ## Configure
 
-quiki ships with a working example configuration and detailed [configuration spec](doc/configuration.md).
+create a `quiki.conf` configuration file based on the
+[provided example](https://github.com/cooper/quiki/blob/master/quiki.conf.example) and place it somewhere readable by the user
+that will run quiki.
 
-```sh
-cp quiki.conf.example quiki.conf
-nano -w quiki.conf
-```
+see the [configuration spec](doc/configuration.md) for all options.
 
 ## Run
 
 ```sh
-quiki quiki.conf    # ($GOPATH/bin/quiki if PATH not configured for go)
+quiki quiki.conf    # (or $GOPATH/bin/quiki)
 ```
-
-Did you expect this page to be longer?
